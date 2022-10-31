@@ -39,6 +39,16 @@
         <br>
         
         <!-- start of the new code -->
+        <p style = "color:rgb(220, 26, 34)"> This is all of the companies infromation if you have any questions <br>
+        or concers with the company. </p>
+
+        <h3> Coustomer Service Number </h3>
+        <p> 000-000-0000 </p>
+
+        <h3> Coustomer Service Email </h3>
+        <p> <a href="mailto: sorin.macaluso1@marist.edu"> Contact Us</a> </p>
+
+        <p style = "color:rgb(220, 26, 34)"> If you have any question please feel free to email or call.</p>
         
     </main>
     <br>
