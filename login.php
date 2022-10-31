@@ -39,6 +39,21 @@
         <br>
         
         <!-- start of the new code -->
+
+        <p style = "color:rgb(220, 26, 34)"> This is where you can log in to your account and check whats <br>
+        in your cart, your iteams shipment tracking, and all your account settings <br>
+        payment informations. </p>
+        <div id="login" style = "color:rgb(220, 26, 34)">
+            <form class="form">
+                Your email:<br><input type="text" name="email"><br>
+                <br>
+
+                Your password:<br><input type="text" name="password">
+                <br><br>
+
+                <input type="submit" value="Submit">
+            </form> 
+        </div>
         
     </main>
     <br>
