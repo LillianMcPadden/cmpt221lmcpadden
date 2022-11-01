@@ -44,11 +44,11 @@
         in your cart, your iteams shipment tracking, and all your account settings <br>
         payment informations. </p>
         <div id="login" style = "color:rgb(220, 26, 34)">
-            <form class="form">
-                Your email:<br><input type="text" name="email"><br>
+            <form action = '' method = 'POST'>
+                Your email:<br><input type="email" name="email"><br>
                 <br>
 
-                Your password:<br><input type="text" name="password">
+                Your password:<br><input type="password" name="password">
                 <br><br>
 
                 <input type="submit" value="Submit">
