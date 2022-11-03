@@ -6,7 +6,7 @@
 
     <head>
         <title>
-            Stellar Sneakers Homepage
+            Stellar Sneakers Admin
         </title>
         <meta charset="utf-8">
         <style>
@@ -30,17 +30,20 @@
         <center><table border=0></center>
         <table>
             <tr>
-                <th><a class= "active" href="product.php"> Product</a></th>
+            <th><a class= "active" href="product.php"> Product</a></th>
                 <th><a class= "active" href="sales.php"> Sales</a></th>
                 <th><a class= "active" href="login.php"> Login</a></th>
                 <th><a class= "active" href="contact.php"> Contact</a></th>
-                <th><a class= "active" href="sales.php"> Suppliers</a></th>
-                <th><a class= "active" href="users.php"> User</a></th>
+                <th><a class= "active" href="admin.php"> Admin</a></th>
+                <th><a class= "active" href="suppliers.php"> Suppliers</a></th>
             </tr>
         </table>
         <br>
         
+        <!-- start of the new code -->
         
+         <h1><a class= 'active' href='explain_tables.php'> Explain Tables</a></h1>
+         <h1><a class= 'active' href='user.php'> Users Table</a></h1>
         
     </main>
     <br>
