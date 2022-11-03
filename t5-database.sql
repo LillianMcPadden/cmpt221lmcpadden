@@ -33,8 +33,8 @@ CREATE TABLE IF NOT EXISTS t5_customer(
     last_name VARCHAR(100),
     first_name VARCHAR(100),
     cus_address VARCHAR(100),
-    cus_email VARCHAR(100);
-    deleted ENUM('y', 'n'));
+    cus_email VARCHAR(100),
+    deleted ENUM("y", "n"));
 
 DROP TABLE IF EXISTS t5_user;
 -- User Table
@@ -43,10 +43,10 @@ CREATE TABLE IF NOT EXISTS t5_user(
     passwrd VARCHAR(100),
     passwrd_reset DATE,
     title Enum('Stakeholder', 'Employee', 'Admin/IT', 'Customer'),
-    monthly_report BLOB;
-    deleted enum("y", "n");
-    email varchar(100);
-    lastchanged date;
+    monthly_report BLOB,
+    deleted enum("y", "n"),
+    email varchar(100),
+    lastchanged date,
     password_type enum("hashed", "text"));
 
 DROP TABLE IF EXISTS t5_orders;
@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS t5_orders(
     order_num INT PRIMARY KEY,
     customer_id INT,
     product_id INT,
-    order_status Enum('Processing','Shipped', 'Delivered');
+    order_status Enum('Processing','Shipped', 'Delivered'),
     deleted enum("y", "n"));
     
     
