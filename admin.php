@@ -34,21 +34,13 @@
                 <th><a class= "active" href="sales.php"> Sales</a></th>
                 <th><a class= "active" href="login.php"> Login</a></th>
                 <th><a class= "active" href="contact.php"> Contact</a></th>
-                <th><a class= "active" href="admin.php"> Admin</a></th>
-                <th><a class= "active" href="suppliers.php"> Suppliers</a></th>
+                <th><a class= "active" href="sales.php"> Suppliers</a></th>
                 <th><a class= "active" href="users.php"> User</a></th>
             </tr>
         </table>
         <br>
         
-        <!-- start of the new code -->
-        <p style = "color:rgb(220, 26, 34)"> This is all of the companies infromation if you have any questions <br>
-        or concers with the company. </p>
-        <h3> Coustomer Service Number </h3>
-        <p> 000-000-0000 </p>
-        <h3> Coustomer Service Email </h3>
-        <p> <a href="mailto: sorin.macaluso1@marist.edu"> Contact Us</a> </p>
-        <p style = "color:rgb(220, 26, 34)"> If you have any question please feel free to email or call.</p>
+        
         
     </main>
     <br>
