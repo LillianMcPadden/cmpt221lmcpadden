@@ -46,29 +46,32 @@
         require "t5connect.php";
 
 
-        echo "<br><br><h3>Explain the Supplier Table </h3>";
+        echo "<h3>Explain the Supplier Table </h3>";
         $q = "Explain t5_supplier";
-
+        echo " <table> <tr> <th> Field </th> <th> Type </th> <th> Null </th> <th> Key </th> <th> Default </th> ";
         $r = mysqli_query($dbc, $q);
         if($r ){
             while ($row= mysqli_fetch_array($r, MYSQLI_NUM))
             {
-                echo "<br>". $row[0]. " ". $row[1]. " ". $row[2]. " ". $row[3]. " ". $row['4'];
+                echo "<br><tr><td>". $row[0]. "</td><td> ". $row[1]. "</td><td> ". $row[2]. "</td><td> ". $row[3]. " </td><td>". $row['4']. "</td></tr>";
             }
         }
+        echo "</table>";
 
         echo "<br><br><h3>Display the Supplier Table </h3>";
         $q = "Select * from t5_supplier";
 
 
         $r = mysqli_query($dbc, $q);
+
+        echo " <table> <tr> <th> supplier_id </th> <th> supName </th> <th> supAddress </th> <th> number_of_sales </th> <th> supEmail </th> <th> supPhone_num </th><th> deleted </th>";
         if($r ){
             while ($row= mysqli_fetch_array($r, MYSQLI_NUM))
             {
-                echo "<br>  ". $row[0] . " ". $row[1]. " ". $row[2]. " ". $row[3] . " ". $row[4]. " ". $row[5]. " ". $row[6];
+                echo "<br><tr><td>". $row[0] . "</td><td>". $row[1]. "</td><td>". $row[2]. "</td><td>". $row[3] . "</td><td>". $row[4]. "</td><td>". $row[5]. "</td><td> ". $row[6]. "</td></tr>";
             }
         }
-
+        echo "</table>";
         ?>
     </main>
     <br>
