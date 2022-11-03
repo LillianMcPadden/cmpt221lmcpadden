@@ -33,7 +33,8 @@
                 <th><a class= "active" href="product.php"> Product</a></th>
                 <th><a class= "active" href="sales.php"> Sales</a></th>
                 <th><a class= "active" href="login.php"> Login</a></th>
-                <th><a class= "active" href="contact.php"> Contact</a></th>
+                <th><a class= "active" href="sales.php"> Suppliers</a></th>
+                <th><a class= "active" href="admin.php"> Admin</a></th>
             </tr>
         </table>
         <br>
