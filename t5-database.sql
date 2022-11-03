@@ -64,3 +64,10 @@ insert into t5_supplier VALUES (112, 'Josh Peters', '35 Center St.', 55, 'joshpe
 insert into t5_supplier VALUES (113, 'Valerie Hanks', '55 Rays Ct. ', 30, 'valhanks@yahoo.com', '4139059090', 'n');
 insert into t5_supplier VALUES (114, 'Alex Ams', '8952 Barker St.', 1, 'aams@gmail.com', '2139490004', 'n');
 insert into t5_supplier VALUES (115, 'Sarah Vars', '22 Main St.', 3, 'sarah111@yahoo.com', '1245436754', 'y');
+
+INSERT INTO t5_user VALUES('ML2495', 'g0hf45!', CURDATE(), 'Employee', 'N/A', 'n', 'masielong@gmail.com', '2022-10-02', 'hashed');
+INSERT INTO t5_user VALUES('HB6583', 'Ke4H8y!', '2023-01-09', 'Customer', 'N/A', 'n', 'eric6875@gmail.com', '2022-10-10', 'hashed');
+INSERT INTO t5_user VALUES('SA85h4', 'heJ78ke', '2023-01-11', 'Admin/IT', 'N/A', 'n', 'nancy89746@gmail.com', '2022-09-12', 'hashed');
+INSERT INTO t5_user VALUES('89JK76', '1985hwu', '2023-01-13', 'Stakeholder', 'N/A', 'n', 'susanbridges9@gmail.com', '2022-08-17', 'hashed');
+INSERT INTO t5_user VALUES('73WX8f', '00yu54#', '2023-02-01', 'Customer', 'N/A', 'n', 'mikemarsh@gmail.com', '2022-06-05', 'hashed');
+INSERT INTO t5_user VALUES('SW5862', '64Jjuq3', '2023-12-05', 'Employee', 'N/A', 'n', 'katebrown@gmail.com', '2022-10-05', 'hashed');
