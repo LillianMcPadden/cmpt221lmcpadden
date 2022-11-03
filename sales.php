@@ -40,7 +40,36 @@
         <br>
         
         <!-- start of the new code -->
-        
+        <?php
+        define("FILE_AUTHOR", "Veronica Longley");
+
+        require "t5connect.php";
+
+
+        echo "<br><br><h3>Explain the Supplier Table </h3>";
+        $q = "Explain t5_supplier";
+
+        $r = mysqli_query($dbc, $q);
+        if($r ){
+            while ($row= mysqli_fetch_array($r, MYSQLI_NUM))
+            {
+                echo "<br>". $row[0]. " ". $row[1]. " ". $row[2]. " ". $row[3]. " ". $row['4'];
+            }
+        }
+
+        echo "<br><br><h3>Display the Supplier Table </h3>";
+        $q = "Select * from t5_supplier";
+
+
+        $r = mysqli_query($dbc, $q);
+        if($r ){
+            while ($row= mysqli_fetch_array($r, MYSQLI_NUM))
+            {
+                echo "<br>  ". $row[0] . " ". $row[1]. " ". $row[2]. " ". $row[3] . " ". $row[4]. " ". $row[5]. " ". $row[6];
+            }
+        }
+
+        ?>
     </main>
     <br>
     <!-- Copy right-->
