@@ -57,3 +57,10 @@ CREATE TABLE IF NOT EXISTS t5_orders(
     product_id INT,
     order_status Enum('Processing','Shipped', 'Delivered');
     deleted enum("y", "n"));
+    
+    
+insert into t5_supplier VALUES (111, 'John Adams', '1519 Homes Ave', 14, 'jadams@gmail.com', '2420908954', 'n');
+insert into t5_supplier VALUES (112, 'Josh Peters', '35 Center St.', 55, 'joshpeters@gmail.com', '3145647227', 'n');
+insert into t5_supplier VALUES (113, 'Valerie Hanks', '55 Rays Ct. ', 30, 'valhanks@yahoo.com', '4139059090', 'n');
+insert into t5_supplier VALUES (114, 'Alex Ams', '8952 Barker St.', 1, 'aams@gmail.com', '2139490004', 'n');
+insert into t5_supplier VALUES (115, 'Sarah Vars', '22 Main St.', 3, 'sarah111@yahoo.com', '1245436754', 'y');
