@@ -24,8 +24,9 @@ CREATE TABLE IF NOT EXISTS t5_supplier (
     supAddress VARCHAR(100),
     number_of_sales INT,
     supEmail VARCHAR(100),
-    supPhone_num CHAR(10));
-    deleted enum("y", "n");
+    supPhone_num CHAR(10),
+    deleted enum("y", "n")
+  );
 
 DROP TABLE IF EXISTS t5_customer;
 -- Customer Table
@@ -34,8 +35,9 @@ CREATE TABLE IF NOT EXISTS t5_customer(
     last_name VARCHAR(100),
     first_name VARCHAR(100),
     cus_address VARCHAR(100),
-    cus_email VARCHAR(100));
-    deleted enum("y", "n");
+    cus_email VARCHAR(100),
+    deleted enum("y", "n")
+  );
 
 DROP TABLE IF EXISTS t5_user;
 -- User Table
@@ -44,11 +46,12 @@ CREATE TABLE IF NOT EXISTS t5_user(
     passwrd VARCHAR(100),
     passwrd_reset DATE,
     title Enum('Stakeholder', 'Employee', 'Admin/IT', 'Customer'),
-    monthly_report BLOB);
-    deleted enum("y", "n");
-    email varchar(100);
-    lastchanged date;
-    password_type enum("hashed", "text");
+    monthly_report BLOB,
+    deleted enum("y", "n"),
+    email varchar(100),
+    lastchanged date,
+    password_type enum("hashed", "text")
+ );
 
 DROP TABLE IF EXISTS t5_orders;
 -- Orders Table
@@ -56,8 +59,9 @@ CREATE TABLE IF NOT EXISTS t5_orders(
     order_num INT PRIMARY KEY,
     customer_id INT,
     product_id INT,
-    order_status Enum('Processing','Shipped', 'Delivered'));
-    deleted enum("y", "n");
+    order_status Enum('Processing','Shipped', 'Delivered'),
+    deleted enum("y", "n")
+ );
 
 insert into t5_supplier VALUES (111, 'John Adams', '1519 Homes Ave', 14, 'jadams@gmail.com', '2420908954', 'n');
 insert into t5_supplier VALUES (112, 'Josh Peters', '35 Center St.', 55, 'joshpeters@gmail.com', '3145647227', 'n');
