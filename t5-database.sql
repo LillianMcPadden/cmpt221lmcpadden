@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS t5_product(
     color enum('white', 'black', 'gray', 'red', 'beige', 'orange', 'yellow', 'green', 'blue', 'purple'),
     quantity INT,
     shoe_cond enum('Grade A', 'Grade B', 'Grade C', 'Grade D', 'Grade F'),
-    size DECIMAL(2,1),
+    size DECIMAL(3,1),
     brand enum('Nike', 'Jordan', 'Adidas', 'Converse', 'Reebok', 'New Balance', 'Vans', 'Puma', 'Yeezy'),
     style_num INT,
     listing_price DECIMAL(6,2),
@@ -76,9 +76,9 @@ INSERT INTO t5_user VALUES('89JK76', '1985hwu', '2023-01-13', 'Stakeholder', 'N/
 INSERT INTO t5_user VALUES('73WX8f', '00yu54#', '2023-02-01', 'Customer', 'N/A', 'n', 'mikemarsh@gmail.com', '2022-06-05', 'hashed');
 INSERT INTO t5_user VALUES('SW5862', '64Jjuq3', '2023-12-05', 'Employee', 'N/A', 'n', 'katebrown@gmail.com', '2022-10-05', 'hashed');
 
-INSERT INTO t5_product VALUES(1, 50, 'black', 2, 'Grade A', 7, 'Nike', 109, 40, 'y');
-INSERT INTO t5_product VALUES(2, 60, 'gray', 3, 'Grade B', 8, 'Jordan', 210, 50, 'n');
-INSERT INTO t5_product VALUES(3, 70, 'red', 1, 'Grade C', 9, 'Adidas', 321, 60, 'y');
-INSERT INTO t5_product VALUES(4, 80, 'orange', 4, 'Grade D', 10, 'Yeezy', 432, 70, 'n');
-INSERT INTO t5_product VALUES(5, 90, 'blue', 2, 'Grade F', 11, 'Vans', 543, 80, 'y');
-INSERT INTO t5_product VALUES(6, 100, 'beige', 5, 'Grade A', 12.5, 'Converse', 654, 90, 'n');
+INSERT INTO t5_product VALUES(1, 50, 'black', 2, 'Grade A', 7, 'Nike', 109, 40, 'y', 113);
+INSERT INTO t5_product VALUES(2, 60, 'gray', 3, 'Grade B', 8, 'Jordan', 210, 50, 'n', 114);
+INSERT INTO t5_product VALUES(3, 70, 'red', 1, 'Grade C', 9, 'Adidas', 321, 60, 'y', 111);
+INSERT INTO t5_product VALUES(4, 80, 'orange', 4, 'Grade D', 10, 'Yeezy', 432, 70, 'n', 111);
+INSERT INTO t5_product VALUES(5, 90, 'blue', 2, 'Grade F', 11, 'Vans', 543, 80, 'y', 112);
+INSERT INTO t5_product VALUES(6, 100, 'beige', 5, 'Grade A', 12.5, 'Converse', 654, 90, 'n', 115);
