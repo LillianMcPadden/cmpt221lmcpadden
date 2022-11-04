@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS t5_product;
 CREATE TABLE IF NOT EXISTS t5_product(
     product_ID INT PRIMARY KEY,
     our_price DECIMAL(6,2),
-    color SET('white', 'black', 'gray', 'red', 'beige', 'orange', 'yellow', 'green', 'blue', 'purple'),
+    color enum('white', 'black', 'gray', 'red', 'beige', 'orange', 'yellow', 'green', 'blue', 'purple'),
     quantity INT,
     shoe_cond enum('Grade A', 'Grade B', 'Grade C', 'Grade D', 'Grade F'),
     size DECIMAL(2,1),
@@ -13,7 +13,8 @@ CREATE TABLE IF NOT EXISTS t5_product(
     style_num INT,
     listing_price DECIMAL(6,2),
     deleted enum("y", "n"),
-    supplier varchar(100);
+    supplier varchar(100)
+ );
 
 DROP TABLE IF EXISTS t5_supplier;
 -- Supplier Table
