@@ -82,3 +82,8 @@ INSERT INTO t5_product VALUES(3, 70, 'red', 1, 'Grade C', 9, 'Adidas', 321, 60, 
 INSERT INTO t5_product VALUES(4, 80, 'orange', 4, 'Grade D', 10, 'Yeezy', 432, 70, 'n', 111);
 INSERT INTO t5_product VALUES(5, 90, 'blue', 2, 'Grade F', 11, 'Vans', 543, 80, 'y', 112);
 INSERT INTO t5_product VALUES(6, 100, 'beige', 5, 'Grade A', 12.5, 'Converse', 654, 90, 'n', 115);
+
+INSERT INTO t5_customer (customer_id, last_name, first_name, cus_address, cus_email, deleted) VALUES(1, 'Jacob', 'Pink', '14 Homes Ave', 'jpink@gmail.com', 'n');
+INSERT INTO t5_customer (customer_id, last_name, first_name, cus_address, cus_email, deleted) VALUES(2, 'James', 'Yellow', '16 Homes Ave', 'jyellow@gmail.com', 'n');
+INSERT INTO t5_customer (customer_id, last_name, first_name, cus_address, cus_email, deleted) VALUES(3, 'Bob', 'Orange', '17 Detroit Ave', 'borange@gmail.com', 'n');
+INSERT INTO t5_customer (customer_id, last_name, first_name, cus_address, cus_email, deleted) VALUES(4, 'John', 'Carl', '20 Detroit Ave', 'jcarl@gmail.com', 'n');
