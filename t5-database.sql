@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS t5_product(
     size DECIMAL(2,1),
     brand enum('Nike', 'Jordan', 'Adidas', 'Converse', 'Reebok', 'New Balance', 'Vans', 'Puma', 'Yeezy'),
     style_num INT,
-    listing_price DECIMAL(6,2)),
+    listing_price DECIMAL(6,2),
     deleted enum("y", "n"),
     supplier varchar(100);
 
