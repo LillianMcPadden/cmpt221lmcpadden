@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS t5_product(
     color enum('white', 'black', 'gray', 'red', 'beige', 'orange', 'yellow', 'green', 'blue', 'purple'),
     quantity INT,
     shoe_cond enum('Grade A', 'Grade B', 'Grade C', 'Grade D', 'Grade F'),
-    size DECIMAL(3,1),
+    size DECIMAL(4,1),
     brand enum('Nike', 'Jordan', 'Adidas', 'Converse', 'Reebok', 'New Balance', 'Vans', 'Puma', 'Yeezy'),
     style_num INT,
     listing_price DECIMAL(6,2),
