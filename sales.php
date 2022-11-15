@@ -45,33 +45,47 @@
 
         require "t5connect.php";
 
-
-        echo "<h3>Explain the Supplier Table </h3>";
-        $q = "Explain t5_supplier";
-        echo " <table> <tr> <th> Field </th> <th> Type </th> <th> Null </th> <th> Key </th> <th> Default </th> ";
-        $r = mysqli_query($dbc, $q);
-        if($r ){
-            while ($row= mysqli_fetch_array($r, MYSQLI_NUM))
-            {
-                echo "<br><tr><td>". $row[0]. "</td><td> ". $row[1]. "</td><td> ". $row[2]. "</td><td> ". $row[3]. " </td><td>". $row['4']. "</td></tr>";
-            }
+        if(ISSET($_POST['sort'])){
+            $sort_type = " ORDER BY ". $_POST['sort'];
         }
-        echo "</table>";
+        else {
+            $sort_type = " ";
+        }
+        if(ISSET($_POST['direction'])){
+            $dir = $_POST['direction'];
+        }
+        else {
+            $dir = " ";
+        }
+
 
         echo "<br><br><h3>Display the Supplier Table </h3>";
-        $q = "Select * from t5_supplier";
+        $q = "Select * from t5_supplier".  $sort_type . " " . $dir;
 
 
         $r = mysqli_query($dbc, $q);
-
-        echo " <table> <tr> <th> supplier_id </th> <th> supName </th> <th> supAddress </th> <th> number_of_sales </th> <th> supEmail </th> <th> supPhone_num </th><th> deleted </th>";
+        echo " <table border = '2' cellpadding = '2' border-spacing = '0px 0'> <tr> <th> Supplier ID </th> <th> Supplier Name </th> <th> Supplier Address </th> <th> Number of Sales </th> <th> Supplier Email </th> <th> Supplier Phone Number </th><th> Deleted </th>";
         if($r ){
             while ($row= mysqli_fetch_array($r, MYSQLI_NUM))
             {
-                echo "<br><tr><td>". $row[0] . "</td><td>". $row[1]. "</td><td>". $row[2]. "</td><td>". $row[3] . "</td><td>". $row[4]. "</td><td>". $row[5]. "</td><td> ". $row[6]. "</td></tr>";
+                echo "<tr><td>". $row[0] . "</td><td>". $row[1]. "</td><td>". $row[2]. "</td><td>". $row[3] . "</td><td>". $row[4]. "</td><td>". $row[5]. "</td><td> ". $row[6]. "</td></tr>";
             }
         }
         echo "</table>";
+
+
+        echo "<form action = '' method = 'POST'>";
+        echo "<br> <input type = 'submit' value = 'Sort it!' style = 'background-color:rgb(220, 26, 34); color:white;'>";
+        echo "<input type = 'radio' name = 'sort' value = 'supplier_id'>    ID";
+        echo "<input type = 'radio' name = 'sort' value = 'supName'>    Name";
+        echo "<input type = 'radio' name = 'sort' value = 'supAddress'>    Address";
+        echo "<input type = 'radio' name = 'sort' value = 'number_of_sales'>    Number of Sales";
+        echo "<input type = 'radio' name = 'sort' value = 'supEmail'>    Email";
+        echo "<input type = 'radio' name = 'sort' value = 'supPhone_num'>    Phone Number";
+        echo "<input type = 'radio' name = 'sort' value = 'deleted'>    Deleted";
+        echo "<br><input type = 'radio' name = 'direction' value = 'ASC'>    Ascending";
+        echo "<input type = 'radio' name = 'direction' value = 'DESC'>    Descending";
+        echo "</form>";
         ?>
     </main>
     <br>
