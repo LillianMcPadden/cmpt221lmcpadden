@@ -15,7 +15,6 @@
             h3 { color:rgb(220, 26, 34);font-size: 25px;font-family: Monaco;}
             header {background-color:rgb(220, 26, 34);}
             footer {background-color:rgb(245, 255, 245);}
-            table {border-collapse: separate; border-spacing: 150px 0;}
         </style>
     </head>
     <body>
@@ -28,22 +27,22 @@
     <main>
         <br>
         <center><table border=0></center>
-        <table>
+        <table style = "border-collapse: separate; border-spacing: 150px 0;">
             <tr>
-                <th><a class= "active" href="product.php"> Product</a></th>
-                <th><a class= "active" href="login.php"> Login</a></th>
+                <th><a class= "active" href="index.php"> Home</a></th>
+                <th><a class= "active" href="tables.php"> Tables</a></th>
                 <th><a class= "active" href="contact.php"> Contact</a></th>
-                <th><a class= "active" href="suppliers.php"> Suppliers</a></th>
                 <th><a class= "active" href="admin.php"> Admin</a></th>
+                <th><a class= "active" href="login.php"> Login</a></th>
             </tr>
         </table>
         <br>
         
         <!-- start of the new code -->
         <?php
-        define("FILE_AUTHOR", "Veronica Longley");
+        $FILE_AUTHOR="Veronica Longley";
 
-        require "t5connect.php";
+        require "connect_db.php";
 
         if(ISSET($_POST['sort'])){
             $sort_type = " ORDER BY ". $_POST['sort'];
@@ -64,7 +63,7 @@
 
 
         $r = mysqli_query($dbc, $q);
-        echo " <table border = '2' cellpadding = '2' border-spacing = '0px 0'> <tr> <th> Supplier ID </th> <th> Supplier Name </th> <th> Supplier Address </th> <th> Number of Sales </th> <th> Supplier Email </th> <th> Supplier Phone Number </th><th> Deleted </th>";
+        echo " <table border = 2> <tr> <th> Supplier ID </th> <th> Supplier Name </th> <th> Supplier Address </th> <th> Number of Sales </th> <th> Supplier Email </th> <th> Supplier Phone Number </th><th> Deleted </th>";
         if($r ){
             while ($row= mysqli_fetch_array($r, MYSQLI_NUM))
             {
@@ -86,12 +85,9 @@
         echo "<br><input type = 'radio' name = 'direction' value = 'ASC'>    Ascending";
         echo "<input type = 'radio' name = 'direction' value = 'DESC'>    Descending";
         echo "</form>";
+        include "file_author.php";
         ?>
     </main>
     <br>
-    <!-- Copy right-->
-    <footer>
-        <center><small> &copy; Maeve Lonergan, Veronica Longley, Sorin Macaluso, Lillian McPadden 2022</small></center>
-    </footer>
     </body>
 </html>
