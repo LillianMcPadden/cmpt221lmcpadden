@@ -15,7 +15,6 @@
             h3 { color:rgb(220, 26, 34);font-size: 25px;font-family: Monaco;}
             header {background-color:rgb(220, 26, 34);}
             footer {background-color:rgb(245, 255, 245);}
-            table {border-collapse: separate; border-spacing: 150px 0;}
         </style>
     </head>
     <body>
@@ -28,14 +27,13 @@
     <main>
         <br>
         <center><table border=0></center>
-        <table>
+        <table style = "border-collapse: separate; border-spacing: 150px 0;">
             <tr>
-                <th><a class= "active" href="product.php"> Product</a></th>
-                <th><a class= "active" href="sales.php"> Sales</a></th>
-                <th><a class= "active" href="login.php"> Login</a></th>
+            <th><a class= "active" href="index.php"> Home</a></th>
+            <th><a class= "active" href="tables.php"> Tables</a></th>
                 <th><a class= "active" href="contact.php"> Contact</a></th>
                 <th><a class= "active" href="admin.php"> Admin</a></th>
-                <th><a class= "active" href="customer.php"> Customer</a></th>
+                <th><a class= "active" href="login.php"> Login</a></th>
             </tr>
         </table>
         <br>
@@ -62,11 +60,12 @@
         <br>In order to do this the supplier would send there shoes to our warehouse so that an employee<br>
         can use our patented checking process ensure that the shoes are real. Then when a coustomer is looking for a shoe, they can<br>
         purchase their desiered shoe from our website.
+        <?php
+        $FILE_AUTHOR="Maeve Lonergan, Veronica Longley, Sorin Macaluso, Lillian McPadden";
+        include "file_author.php";
+        ?>
     </main>
     <br>
     <!-- Copy right-->
-    <footer>
-        <center><small> &copy; Maeve Lonergan, Veronica Longley, Sorin Macaluso, Lillian McPadden 2022</small></center>
-    </footer>
     </body>
 </html>
