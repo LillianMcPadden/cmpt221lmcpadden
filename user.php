@@ -15,7 +15,6 @@
             h3 { color:rgb(220, 26, 34);font-size: 25px;font-family: Monaco;}
             header {background-color:rgb(220, 26, 34);}
             footer {background-color:rgb(245, 255, 245);}
-            table {border-collapse: separate; border-spacing: 150px 0;}
         </style>
     </head>
     <body>
@@ -28,39 +27,67 @@
     <main>
         <br>
         <center><table border=0></center>
-        <table>
+        <table style = "border-collapse: separate; border-spacing: 150px 0;">
             <tr>
-            <th><a class= "active" href="product.php"> Product</a></th>
-                <th><a class= "active" href="sales.php"> Sales</a></th>
-                <th><a class= "active" href="login.php"> Login</a></th>
+                <th><a class= "active" href="index.php"> Home</a></th>
+                <th><a class= "active" href="tables.php"> Tables</a></th>
                 <th><a class= "active" href="contact.php"> Contact</a></th>
                 <th><a class= "active" href="admin.php"> Admin</a></th>
-                <th><a class= "active" href="sales.php"> Sales</a></th>
+                <th><a class= "active" href="login.php"> Login</a></th>
             </tr>
         </table>
         <br>
-        <?php
-        echo " <p><b> Connect to site_db: </b>";
+         <?php
+        $FILE_AUTHOR="Maeve Lonergan";
+
         require "connect_db.php";
 
-        echo "<br><br><h3>Display the User Table </h3>";
-        $q = "Select * from t5_user";
-        $r = mysqli_query($dbc, $q);
+        if(ISSET($_POST['sort'])){
+            $sort_type = " ORDER BY ". $_POST['sort'];
+        }
+        else {
+            $sort_type = " ";
+        }
+        if(ISSET($_POST['direction'])){
+            $dir = $_POST['direction'];
+        }
+        else {
+            $dir = " ";
+        }
 
-        echo " <table> <tr> <th> username </th> <th> passwrd </th> <th> passwrd_reset </th> <th> title </th> <th> monthly_report </th> <th> deleted </th><th> email </th><th> lastchanged </th><th> password_type </th>";
+
+        echo "<br><br><h3>Display the User Table </h3>";
+        $q = "Select * from t5_user".  $sort_type . " " . $dir;
+
+
+        $r = mysqli_query($dbc, $q);
+        echo " <table border = 2> <tr> <th> Username </th> <th> Password </th> <th> Password reset date </th> <th> Position title </th> <th> Monthly Report </th> <th> Deleted </th> <th> Email </th> <th> Date of last password cange </th> <th> Type of passsword </th>";
         if($r ){
             while ($row= mysqli_fetch_array($r, MYSQLI_NUM))
             {
-                echo "<br><tr><td>". $row[0] . "</td><td>". $row[1]. "</td><td>". $row[2]. "</td><td>". $row[3] . "</td><td>". $row[4]. "</td><td>". $row[5]. "</td><td> ". $row[6]. "</td><td>". $row[7]. "</td><td>". $row[8]. "</td></tr>";
+                echo "<tr><td>". $row[0] . "</td><td>". $row[1]. "</td><td>". $row[2]. "</td><td>". $row[3] . "</td><td>". $row[4] ."</td><td>". $row[5] ."</td><td>". $row[6] ."</td><td>". $row[7] ."</td><td>". $row[8] ."</td><td>". $row[9] ."</td></tr>";
             }
         }
         echo "</table>";
+
+
+        echo "<form action = '' method = 'POST'>";
+        echo "<br> <input type = 'submit' value = 'Sort it!' style = 'background-color:rgb(220, 26, 34); color:white;'>";
+        echo "<input type = 'radio' name = 'sort' value = 'username'>    Username";
+        echo "<input type = 'radio' name = 'sort' value = 'passwrd'>    Password";
+        echo "<input type = 'radio' name = 'sort' value = 'passwrd_reset'>    Password reset date";
+        echo "<input type = 'radio' name = 'sort' value = 'title'>    Job title";
+        echo "<input type = 'radio' name = 'sort' value = 'monthly_report'>    Monthly Report";
+        echo "<input type = 'radio' name = 'sort' value = 'deleted'>    Deleted";
+        echo "<input type = 'radio' name = 'sort' value = 'email'>    Email";
+        echo "<input type = 'radio' name = 'sort' value = 'lastchanged'>    Date of last password change";
+        echo "<input type = 'radio' name = 'sort' value = 'password_type'>    Type of password";
+        echo "<br><input type = 'radio' name = 'direction' value = 'ASC'>    Ascending";
+        echo "<input type = 'radio' name = 'direction' value = 'DESC'>    Descending";
+        echo "</form>";
+        include "file_author.php";
         ?>
     </main>
-    <br>
-    <!-- Copy right-->
-    <footer>
-        <center><small> &copy; Maeve Lonergan, Veronica Longley, Sorin Macaluso, Lillian McPadden 2022</small></center>
-    </footer>
+   
     </body>
 </html>
