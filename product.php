@@ -27,19 +27,18 @@
     <main>
         <br>
         <center><table border=0></center>
-        <table>
+        <table style = "border-collapse: separate; border-spacing: 150px 0;">
             <tr>
-                <th><a class= "active" href="product.php"> Product</a></th>
-                <th><a class= "active" href="sales.php"> Sales</a></th>
-                <th><a class= "active" href="login.php"> Login</a></th>
+                <th><a class= "active" href="index.php"> Home</a></th>
+                <th><a class= "active" href="tables.php"> Tables</a></th>
                 <th><a class= "active" href="contact.php"> Contact</a></th>
                 <th><a class= "active" href="admin.php"> Admin</a></th>
-                <th><a class= "active" href="sales.php"> Suppliers</a></th>
+                <th><a class= "active" href="login.php"> Login</a></th>
             </tr>
         </table>
         <br>
         <?php
-        define("FILE_AUTHOR", "Lillian McPadden");
+        $FILE_AUTHOR="Lillian McPadden";
         echo " <p><b> Connect to site_db: </b>";
         require "connect_db.php";
 
@@ -84,13 +83,10 @@
         echo "<br><input type = 'radio' name = 'direction' value = 'ASC'>    Ascending";
         echo "<input type = 'radio' name = 'direction' value = 'DESC'>    Descending";
         echo "</form>";
-
+        include "file_author.php";
         ?>
     </main>
     <br>
-    <!-- Copy right-->
-    <footer>
-        <center><small> &copy; Lillian McPadden 2022</small></center>
-    </footer>
+
     </body>
 </html>
