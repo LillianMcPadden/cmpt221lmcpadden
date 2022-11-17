@@ -15,7 +15,6 @@
             h3 { color:rgb(220, 26, 34);font-size: 25px;font-family: Monaco;}
             header {background-color:rgb(220, 26, 34);}
             footer {background-color:rgb(245, 255, 245);}
-            table {border-collapse: separate; border-spacing: 150px 0;}
         </style>
     </head>
     <body>
@@ -28,28 +27,25 @@
     <main>
         <br>
         <center><table border=0></center>
-        <table>
+        <table style = "border-collapse: separate; border-spacing: 150px 0;">
             <tr>
-            <th><a class= "active" href="product.php"> Product</a></th>
-                <th><a class= "active" href="sales.php"> Sales</a></th>
-                <th><a class= "active" href="login.php"> Login</a></th>
+                <th><a class= "active" href="index.php"> Home</a></th>
+                <th><a class= "active" href="tables.php"> Tables</a></th>
                 <th><a class= "active" href="contact.php"> Contact</a></th>
                 <th><a class= "active" href="admin.php"> Admin</a></th>
-                <th><a class= "active" href="suppliers.php"> Suppliers</a></th>
+                <th><a class= "active" href="login.php"> Login</a></th>
             </tr>
         </table>
         <br>
         
         <!-- start of the new code -->
-        
-         <h1><a class= 'active' href='explain_tables.php'> Explain Tables</a></h1>
-         <h1><a class= 'active' href='user.php'> Users Table</a></h1>
-        
+        <?php
+        $FILE_AUTHOR="Maeve Lonergan";
+        echo"<h1><a class= 'active' href='explain_tables.php'> Explain Tables</a></h1>";
+        echo"<h1><a class= 'active' href='user.php'> Users Table</a></h1>";
+        include "file_author.php";
+        ?>
     </main>
     <br>
-    <!-- Copy right-->
-    <footer>
-        <center><small> &copy; Maeve Lonergan, Veronica Longley, Sorin Macaluso, Lillian McPadden 2022</small></center>
-    </footer>
     </body>
 </html>
