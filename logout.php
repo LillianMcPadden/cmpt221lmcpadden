@@ -57,8 +57,8 @@
 
     //isset to reset the session vairables
     if (($_SERVER['REQUEST_METHOD']==='GET')) {
-        $_SESSION["variable"] = "";
-        unset($_SESSION["variable"]);
+        $_SESSION["login_status"] = "";
+        unset($_SESSION["login_status"]);
     }
     
    
