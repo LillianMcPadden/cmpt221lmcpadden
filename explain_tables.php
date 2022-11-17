@@ -15,7 +15,7 @@
             h3 { color:rgb(220, 26, 34);font-size: 25px;font-family: Monaco;}
             header {background-color:rgb(220, 26, 34);}
             footer {background-color:rgb(245, 255, 245);}
-            table {border-collapse: separate; border-spacing: 150px 0;}
+           
         </style>
     </head>
     <body>
@@ -28,83 +28,90 @@
     <main>
         <br>
         <center><table border=0></center>
-        <table>
+        <table style = "border-collapse: separate; border-spacing: 150px 0;">
             <tr>
-                <th><a class= "active" href="product.php"> Product</a></th>
-                <th><a class= "active" href="sales.php"> Sales</a></th>
-                <th><a class= "active" href="login.php"> Login</a></th>
+                <th><a class= "active" href="index.php"> Home</a></th>
+                <th><a class= "active" href="tables.php"> Tables</a></th>
                 <th><a class= "active" href="contact.php"> Contact</a></th>
                 <th><a class= "active" href="admin.php"> Admin</a></th>
-                <th><a class= "active" href="suppliers.php"> Suppliers</a></th>
+                <th><a class= "active" href="login.php"> Login</a></th>
             </tr>
         </table>
+        
         <br>
         
         <!-- start of the new code -->
-        <body>
+    
            
         <?php
+            $FILE_AUTHOR = "Maeve Lonergan";
             echo " <p><b> Connect to site_db: </b>";
             require "connect_db.php";
-
-            echo "<h1> Explain tables: </h1>";
             echo "<hr>";
-
-            echo "Explaining table t5_customer";
+            echo "<h3> Customers table explained </h3>";
+            echo "<table border = 1><tr> <th> Column Name </th> <th> Column Type </th> <th> Null/Not Null</th> <th> Primary Key </th>";
             $q = "EXPLAIN t5_customer";
             $r = mysqli_query ($dbc,$q);
-            if ($r ){
-                while ($row = mysqli_fetch_array( $r, MYSQLI_NUM)){
-                    echo "<br>" . $row[0] . " " . $row[1] . " " . $row[2] . " " . $row[3];
-                } 
+            if($r ){
+                while ($row= mysqli_fetch_array($r, MYSQLI_NUM)){
+                    echo "<tr><td>". $row[0] . "</td><td>". $row[1]. "</td><td>". $row[2]. "</td><td>". $row[3]. "</td></tr>";
+                }
             }
+            echo "</table>";
             echo "<hr>";
-            
-            echo "Explaining table t5_orders";
+
+            echo "<h3> Orders table explained </h3>";
+            echo "<table border = 1><tr> <th> Column Name </th> <th> Column Type </th> <th> Null/Not Null</th> <th> Primary Key </th>";
             $q = "EXPLAIN t5_orders";
             $r = mysqli_query ($dbc,$q);
-            if ($r ){
-                while ($row = mysqli_fetch_array( $r, MYSQLI_NUM)){
-                    echo "<br>" . $row[0] . " " . $row[1] . " " . $row[2] . " " . $row[3];
+            if($r ){
+                while ($row= mysqli_fetch_array($r, MYSQLI_NUM)){
+                    echo "<tr><td>". $row[0] . "</td><td>". $row[1]. "</td><td>". $row[2]."</td><td>". $row[3]. "</td></tr>";
                 }
             }
+            echo "</table>";
             echo "<hr>";
+           
 
-            echo "Explaining table t5_product";
+            echo "<h3> Products table explained </h3>";
+            echo "<table border = 1><tr> <th> Column Name </th> <th> Column Type </th> <th> Null/Not Null</th> <th> Primary Key </th>";
             $q = "EXPLAIN t5_product";
             $r = mysqli_query ($dbc,$q);
-            if ($r ){
-                while ($row = mysqli_fetch_array( $r, MYSQLI_NUM)){
-                    echo "<br>" . $row[0] . " " . $row[1] . " " . $row[2] . " " . $row[3];
+            if($r ){
+                while ($row= mysqli_fetch_array($r, MYSQLI_NUM)){
+                    echo "<tr><td>". $row[0] . "</td><td>". $row[1]. "</td><td>". $row[2]."</td><td>". $row[3]. "</td></tr>";
                 }
             }
+            echo "</table>";
             echo "<hr>";
+            
 
-            echo "Explaining table t5_supplier";
+            echo "<h3> Suppliers table explained </h3>"; 
+            echo "<table border = 1><tr> <th> Column Name </th> <th> Column Type </th> <th> Null/Not Null</th> <th> Primary Key </th>";
             $q = "EXPLAIN t5_supplier";
             $r = mysqli_query ($dbc,$q);
-            if ($r ){
-                while ($row = mysqli_fetch_array( $r, MYSQLI_NUM)){
-                    echo "<br>" . $row[0] . " " . $row[1] . " " . $row[2] . " " . $row[3];
+            if($r ){
+                while ($row= mysqli_fetch_array($r, MYSQLI_NUM)){
+                    echo "<tr><td>". $row[0] . "</td><td>". $row[1]. "</td><td>". $row[2]. "</td><td>". $row[3]. "</td></tr>";
                 }
             }
+            echo "</table>";
             echo "<hr>";
-
-            echo "Explaining table t5_user";
+            
+            echo "<h3> Users table explained </h3>";
+            echo "<table border = 1><tr> <th> Column Name </th> <th> Column Type </th> <th> Null/Not Null</th> <th> Primary Key </th>";
             $q = "EXPLAIN t5_user";
             $r = mysqli_query ($dbc,$q);
-            if ($r ){
-                while ($row = mysqli_fetch_array( $r, MYSQLI_NUM)){
-                    echo "<br>" . $row[0] . " " . $row[1] . " " . $row[2] . " " . $row[3];
+            if($r ){
+                while ($row= mysqli_fetch_array($r, MYSQLI_NUM)){
+                    echo "<tr><td>". $row[0] . "</td><td>". $row[1]. "</td><td>". $row[2]. "</td><td>". $row[3]. "</td></tr>";
                 }
             }
+            echo "</table>";
+            echo "<hr>";
+            include "file_author.php";
     ?>
-     </body>
+     
     </main>
-    <br>
-    <!-- Copy right-->
-    <footer>
-        <center><small> &copy; Maeve Lonergan, Veronica Longley, Sorin Macaluso, Lillian McPadden 2022</small></center>
-    </footer>
     </body>
 </html>
