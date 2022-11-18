@@ -40,7 +40,7 @@
         <?php
         $FILE_AUTHOR="Lillian McPadden";
         echo " <p><b> Connect to site_db: </b>";
-        require "connect_db.php";
+        require "../connect_db.php";
 
         if(ISSET($_POST['sort'])){
             $sort_type = " ORDER BY ". $_POST['sort'];
