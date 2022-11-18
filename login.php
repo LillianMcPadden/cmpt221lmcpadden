@@ -44,7 +44,7 @@
        $FILE_AUTHOR = "Maeve Lonergan";
 
     //connect to site_db
-    require "connect_db.php";
+    require "../connect_db.php";
     echo "<h1> Login </h1>";
 
     if (isset($_SESSION['login_status'])){
