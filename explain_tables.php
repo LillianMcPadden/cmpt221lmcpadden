@@ -46,7 +46,7 @@
         <?php
             $FILE_AUTHOR = "Maeve Lonergan";
             echo " <p><b> Connect to site_db: </b>";
-            require "connect_db.php";
+            require "../connect_db.php";
             echo "<hr>";
             echo "<h3> Customers table explained </h3>";
             echo "<table border = 1><tr> <th> Column Name </th> <th> Column Type </th> <th> Null/Not Null</th> <th> Primary Key </th>";
