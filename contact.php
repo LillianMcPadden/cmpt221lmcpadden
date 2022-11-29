@@ -45,7 +45,7 @@
         <h3> Customer Service Number </h3>
         <p> 000-000-0000 </p>
         <h3> Customer Service Email </h3>
-        <p> <a href="mailto: sorin.macaluso1@marist.edu"> Contact Us</a> </p>
+        <p> <a href="mailto: sorin.macaluso1@marist.edu"> Email Us</a> </p>
         <p style = "color:rgb(220, 26, 34)"> If you have any question please feel free to email or call.</p>
         <?php
         $FILE_AUTHOR="Sorin Macaluso";
