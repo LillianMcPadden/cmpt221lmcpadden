@@ -15,12 +15,13 @@
             h3 { color:rgb(220, 26, 34);font-size: 25px;font-family: Monaco;}
             header {background-color:rgb(220, 26, 34);}
             footer {background-color:rgb(245, 255, 245);}
+            th {font-family: Papyrus;}
         </style>
     </head>
     <body>
     <!-- Logo to for the website-->
     <header>
-        <center><img src="https://lh3.googleusercontent.com/R9mBkfrGZ7arGjewA9RXfo-Y6Miw-50wTVs8uoTtFLLjjZqkv1BRQZeXuWMQu9NIlIR7Qh2O3dNcgRd-qMMW-bVRCb_5KE-qBW2FIceB7vcdY_egVWyEb8AYx6CYLvhU_PQGjxtkMcg=w2400"; width = "100%"; height = 300px></center>
+        <center><img src="https://lh3.googleusercontent.com/R9mBkfrGZ7arGjewA9RXfo-Y6Miw-50wTVs8uoTtFLLjjZqkv1BRQZeXuWMQu9NIlIR7Qh2O3dNcgRd-qMMW-bVRCb_5KE-qBW2FIceB7vcdY_egVWyEb8AYx6CYLvhU_PQGjxtkMcg=w2400"; width = 1100px; height = 300px></center>
         
     </header>
     <!-- Will become links to navigate the website-->
@@ -36,35 +37,37 @@
                 <th><a class= "active" href="login.php"> Login</a></th>
             </tr>
         </table>
-        <br>
-        
-        <!-- Disclaimer for the website-->
-        <center><h1> Disclaimer </h1></center>
-        Please read the disclaimer below before using the Stellar Sneakers website operated by Maeve Lonergan, 
-        Veronica Longley, Sorin Macaluso, Lillian McPadden.<br>
-        <br>The contents of the website are the intellectual property of Sorin Macaluso. You are not allowed to<br>
-        reuse, republish, or reprint any of the contents on this website without written consent.<br>
-        <br>All posted information posted on Stellar Sneakers is used for the company so that we can insure that our customers have a<br>
-        comfortable and easy experience on the website. We are committed to keeping the website up to date and accurate.<br>
-        If anything is found to be incorrect or out of date please notify a IT representative.<br>
-        
-        <br>We are also not liable for any loss as a result of any inaccuracies or incompleteness. Or any problems that occurred<br>
-        because of a disruption in the internet. Stellar Sneakers has no liability for any loss related to the data on this website.<br>
-        <br>
         <!-- A small section descibing the company-->
         <center><h1> About Us</h1></center>
+        <h3 style = "font-size: 15px;">
         Stellar Sneakers is a company that will allow anyone to sell their designer shoes. We will also be able to accurately<br> 
         identify any shoes that are replicas of the original shoe so that the customer is reassured that the product they are<br>
         buying is indeed authentic.<br>
         
         <br>In order to do this the supplier would send there shoes to our warehouse so that an employee<br>
-        can use our patented checking process ensure that the shoes are real. Then when a coustomer is looking for a shoe, they can<br>
-        purchase their desiered shoe from our website.
+        can use our patented validation process to ensure that the shoes are real. Then, when a coustomer is looking for a shoe, they can<br>
+        purchase their desired shoe from our website.
+        </h3>
+
+
+        <center><h1> Shop Our Most Popular Shoes! </h1>
+
+        <a class= "active" href="product.php"> <img src="https://ibb.co/fq14Xfn" width="350" height="200"> </a>
+        <a class= "active" href="product.php"> <img src="https://ibb.co/Zh52JT0" width="350" height="200"> </a>
+        <a class= "active" href="product.php"> <img src="https://ibb.co/gjckJy8" width="350" height="200"> </a>
+
+        </center>
+
+        <center><small><a class= "active" href="disclaimer.php"> Legal Disclaimer</a></small></center>
         <?php
         $FILE_AUTHOR="Maeve Lonergan, Veronica Longley, Sorin Macaluso, Lillian McPadden";
         include "file_author.php";
+        
         ?>
+
+        
     </main>
+
     <br>
     <!-- Copy right-->
     </body>
