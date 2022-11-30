@@ -1,0 +1,30 @@
+  //add for session variables at the top with the require stuff
+  session_start();
+  
+  
+  //this is the code that will initialize the session vairable stuff to be use to check for a login
+  if (isset($_SESSION['login_status'])){
+    $login_status = $_SESSION['login_status'];
+  } else{
+    $login_status = "NOT LOGGED IN";
+  }
+    echo "<br>" . $login_status;
+    
+    
+    
+    
+   //this will check if there is a login_status  
+    if (isset($_SESSION['login_status'])){
+      //if there is it will display the radio buttons to be used to change the table around or what every you want to appear only when a user is logged in
+      //if there is no log in it will go to the else which will display some text and a link to the login page.
+    } else{
+            echo "<br> You have not logged in yet!";
+            echo "<br> Please log in at link below in order to change tables or add to the tables!";
+        }
+         echo "<table style = 'border-collapse: separate; border-spacing: 150px 0;''>
+         <tr>
+             <th><a class= 'active' href='login.php'> Login</a></th>
+         </tr>
+        </table>";
+        
+        //this should be able to be used with the admin and tables
