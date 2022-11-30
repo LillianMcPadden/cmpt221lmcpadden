@@ -11,8 +11,8 @@ CREATE TABLE IF NOT EXISTS t5_product(
     size DECIMAL(4,1),
     brand enum('Nike', 'Jordan', 'Adidas', 'Converse', 'Reebok', 'New Balance', 'Vans', 'Puma', 'Yeezy'),
     style_num INT,
-    listing_price DECIMAL(6,2);
-    deleted enum("y", "n");
+    listing_price DECIMAL(6,2),
+    deleted enum('y', 'n'),
     supplier varchar(100));
 
 DROP TABLE IF EXISTS t5_supplier;
@@ -23,8 +23,8 @@ CREATE TABLE IF NOT EXISTS t5_supplier (
     supAddress VARCHAR(100),
     number_of_sales INT,
     supEmail VARCHAR(100),
-    supPhone_num CHAR(10));
-    deleted enum("y", "n");
+    supPhone_num CHAR(10),
+    deleted enum('y', 'n'));
 
 DROP TABLE IF EXISTS t5_customer;
 -- Customer Table
@@ -33,8 +33,8 @@ CREATE TABLE IF NOT EXISTS t5_customer(
     last_name VARCHAR(100),
     first_name VARCHAR(100),
     cus_address VARCHAR(100),
-    cus_email VARCHAR(100));
-    deleted enum("y", "n");
+    cus_email VARCHAR(100),
+    deleted enum('y', 'n'));
 
 DROP TABLE IF EXISTS t5_user;
 -- User Table
@@ -43,11 +43,11 @@ CREATE TABLE IF NOT EXISTS t5_user(
     passwrd VARCHAR(100),
     passwrd_reset DATE,
     title Enum('Stakeholder', 'Employee', 'Admin/IT', 'Customer'),
-    monthly_report BLOB;
-    deleted enum("y", "n");
-    email varchar(100);
-    lastchanged date;
-    password_type enum("hashed", "text"));
+    monthly_report BLOB,
+    email varchar(100),
+    deleted enum('y','n'),
+    lastchanged date,
+    password_type enum('hashed', 'text'));
 
 DROP TABLE IF EXISTS t5_orders;
 -- Orders Table
@@ -55,8 +55,8 @@ CREATE TABLE IF NOT EXISTS t5_orders(
     order_num INT PRIMARY KEY,
     customer_id INT,
     product_id INT,
-    order_status Enum('Processing','Shipped', 'Delivered');
-    deleted enum("y", "n"));
+    order_status Enum('Processing','Shipped', 'Delivered'),
+    deleted enum('y', 'n'));
 
 insert into t5_supplier VALUES (111, 'John Adams', '1519 Homes Ave', 14, 'jadams@gmail.com', '2420908954', 'n');
 insert into t5_supplier VALUES (112, 'Josh Peters', '35 Center St.', 55, 'joshpeters@gmail.com', '3145647227', 'n');
@@ -97,7 +97,7 @@ INSERT INTO t5_product VALUES(6, 100.00, 'beige', 5, 'Grade A', 12.5, 'Converse'
 INSERT INTO t5_product VALUES(7, 110.00, 'black', 5, 'Grade B', 12.0, 'Nike', 765, 100.00, 'y', 'Billie Eillish');
 INSERT INTO t5_product VALUES(8, 120.00, 'gray', 2, 'Grade C', 11.5, 'Jordan', 876, 110.00, 'n', 'Lebron James');
 INSERT INTO t5_product VALUES(9, 130.00, 'red', 4, 'Grade D', 11.0, 'Adidas', 987, 120.00, 'y', 'Kayne West');
-INSERT INTO t5_product VALUES(10, 140.00, 'orange', 1, 'Grade E', 10.5, 'Yeezy', 102, 130.00, 'n', 'Kobe Bryant');
+INSERT INTO t5_product VALUES(10, 140.00, 'orange', 1, 'Grade F', 10.5, 'Yeezy', 102, 130.00, 'n', 'Kobe Bryant');
 INSERT INTO t5_product VALUES(11, 150.00, 'blue', 3, 'Grade F', 10.0, 'Vans', 123, 140.00, 'y', 'Lizzy McAlpine');
 INSERT INTO t5_product VALUES(12, 160.00, 'beige', 6, 'Grade A', 9.5, 'Converse', 234, 150.00, 'n', 'Taylor Swift');
 
