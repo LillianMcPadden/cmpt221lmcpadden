@@ -52,9 +52,9 @@
 
         <center><h1> Shop Our Most Popular Shoes! </h1>
 
-        <a class= "active" href="product.php"> <img src="https://ibb.co/fq14Xfn" width="350" height="200"> </a>
-        <a class= "active" href="product.php"> <img src="https://ibb.co/Zh52JT0" width="350" height="200"> </a>
-        <a class= "active" href="product.php"> <img src="https://ibb.co/gjckJy8" width="350" height="200"> </a>
+        <a class= "active" href="product.php"> <img src="nike.png" width="350" height="200"> </a>
+        <a class= "active" href="product.php"> <img src="nike2.png" width="350" height="200"> </a>
+        <a class= "active" href="product.php"> <img src="yeezy.png" width="350" height="200"> </a>
 
         </center>
 
