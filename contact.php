@@ -13,6 +13,7 @@
             * {background-color: rgb(255, 255, 255);}
             h1 { color : black; font-family: Papyrus;font-size: 45px;}
             h3 { color:rgb(220, 26, 34);font-size: 25px;font-family: Monaco;}
+            h4 {font-family: Monaco; font-size: 20px; }
             header {background-color:rgb(220, 26, 34);}
             footer {background-color:rgb(245, 255, 245);}
             th {font-family: Papyrus;}
@@ -40,15 +41,14 @@
         <br>
         
         <!-- start of the new code -->
-        <p style = "color:rgb(220, 26, 34)"> This is all of the companies information if you have any questions <br>
-        or concerns with the company. </p>
-        <h3> Customer Service Number </h3>
-        <p> 000-000-0000 </p>
-        <h3> Customer Service Email </h3>
-        <p> <a href="mailto: sorin.macaluso1@marist.edu"> Email Us</a> </p>
-        <p style = "color:rgb(220, 26, 34)"> If you have any question please feel free to email or call.</p>
+        <h1> Contact Us </h1>
+        <hr>
+        <h3> Please direct any questions, concerns, or comments to the following: <h3>
+        <h4><p> Phone Number: (123) 456-7777 </h4>
+        <h4> <a href="mailto: stellarsneakersservice@gmail.com" style=color:black> Email Us</a> </h4>
+      
         <?php
-        $FILE_AUTHOR="Sorin Macaluso";
+        $FILE_AUTHOR="Maeve Lonergan";
         include "file_author.php";
         ?>
     </main>
