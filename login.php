@@ -21,7 +21,7 @@
     <body>
     <!-- Logo to for the website-->
     <header>
-        <center><img src="https://lh3.googleusercontent.com/R9mBkfrGZ7arGjewA9RXfo-Y6Miw-50wTVs8uoTtFLLjjZqkv1BRQZeXuWMQu9NIlIR7Qh2O3dNcgRd-qMMW-bVRCb_5KE-qBW2FIceB7vcdY_egVWyEb8AYx6CYLvhU_PQGjxtkMcg=w2400"; width = 1100px; height = 300px></center>
+        <center><img src="logo.png"; width = "100%"; height = 300px></center>
         
     </header>
     <!-- Will become links to navigate the website-->
@@ -45,7 +45,7 @@
        $FILE_AUTHOR = "Maeve Lonergan";
 
     //connect to site_db
-    require "../connect_db.php";
+    require "connect_db.php";
     echo "<h1> Login </h1>";
 
     if (isset($_SESSION['login_status'])){
