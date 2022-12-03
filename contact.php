@@ -36,6 +36,7 @@
                 <th><a class= "active" href="contact.php"> Contact</a></th>
                 <th><a class= "active" href="admin.php"> Admin</a></th>
                 <th><a class= "active" href="login.php"> Login</a></th>
+                <th><a class= "active" href="logout.php"> Logout</a></th>
             </tr>
         </table>
         <br>
