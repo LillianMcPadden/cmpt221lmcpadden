@@ -15,7 +15,12 @@
             h3 { color:rgb(220, 26, 34);font-size: 25px;font-family: Monaco;}
             header {background-color:rgb(220, 26, 34);}
             footer {background-color:rgb(245, 255, 245);}
-            th {font-family: Papyrus;}
+           th {font-family: Papyrus; padding: 5px 5px 5px 5px; font-weight:2300; font-size: 25px;}
+            td {padding: 5px 5px 5px 5px;font-size: 25px;} 
+            form { font-family: Monaco;font-size: 25px;}
+           .tableoutline{background-color:rgb(220, 26, 34);}
+           .tableheader{background:rgb(249, 208, 208 );}
+           .redcolor{color:rgb(220, 26, 34);}
         </style>
     </head>
     <body>
@@ -59,12 +64,12 @@
         }
 
 
-        echo "<br><br><h3>Display the Supplier Table </h3>";
+        echo "<br><br><h1 class='redcolor'>Display the Supplier Table </h1>";
         $q = "Select * from t5_supplier".  $sort_type . " " . $dir;
 
 
         $r = mysqli_query($dbc, $q);
-        echo " <table border = 2> <tr> <th> Supplier ID </th> <th> Supplier Name </th> <th> Supplier Address </th> <th> Number of Sales </th> <th> Supplier Email </th> <th> Supplier Phone Number </th><th> Deleted </th>";
+        echo " <table border = 1 class = 'tableoutline'> <tr> <th class='tableheader'> Supplier ID </th> <th class='tableheader'> Supplier Name </th> <th class='tableheader'> Supplier Address </th> <th class='tableheader'> Number of Sales </th> <th class='tableheader'> Supplier Email </th> <th class='tableheader'> Supplier Phone Number </th><th class='tableheader'> Deleted </th>";
         if($r ){
             while ($row= mysqli_fetch_array($r, MYSQLI_NUM))
             {
