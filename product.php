@@ -65,7 +65,7 @@
         $q = "Select * from t5_product $sort_type $dir";
         $r = mysqli_query($dbc, $q);
 
-        echo " <table border = 1 class = 'tableoutline'> <tr><th class='tableheader'> product_ID </th><th class='tableheader'> our_price </th><th class='tableheader'> color </th><th class='tableheader'> quantity </th><th class='tableheader'> shoe_cond  </th> <th class='tableheader'> size </th><th class='tableheader'> brand </th><th class='tableheader'> style_num </th><th class='tableheader'> listing_price </th><th class='tableheader'> deleted </th></tr>";
+        echo " <table border = 1 class = 'tableoutline'> <tr><th class='tableheader'> Product ID </th><th class='tableheader'> Our Price </th><th class='tableheader'> Color </th><th class='tableheader'> Quantity </th><th class='tableheader'> Shoe Condition  </th> <th class='tableheader'> Size </th><th class='tableheader'> Brand </th><th class='tableheader'> Style Number </th><th class='tableheader'> Listing Price </th><th class='tableheader'> deleted </th></tr>";
         if($r ){
             while ($row= mysqli_fetch_array($r, MYSQLI_NUM))
             {
