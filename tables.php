@@ -42,13 +42,30 @@
         
         <!-- start of the new code -->
         <?php
+        session_start();
         $FILE_AUTHOR="Maeve Lonergan";
-        
-         echo"<h1><a class= 'active' href='product.php'> Products</a></h1>";
-        echo"<h1><a class= 'active' href='sales.php'> Suppliers</a></h1>";
-        echo"<h1><a class= 'active' href='customer.php'> Customers</a></h1>";
+
+        if (isset($_SESSION['login_status'])){
+            $login_status = $_SESSION['login_status'];
+          } else{
+            $login_status = "NOT LOGGED IN";
+          }
+            echo "<br>" . $login_status;
+
+        if (isset($_SESSION['login_status'])){
+            echo"<h1><a class= 'active' href='product.php'> Products</a></h1>";
+            echo"<h1><a class= 'active' href='sales.php'> Suppliers</a></h1>";
+            echo"<h1><a class= 'active' href='customer.php'> Customers</a></h1>";
+        } else{
+            echo "<br> You have not logged in yet!";
+            echo "<br> Please log in at link below in order to change tables or add to the tables!";
+        }
+         echo "<table style = 'border-collapse: separate; border-spacing: 150px 0;''>
+         <tr>
+             <th><a class= 'active' href='login.php'> Login</a></th>
+         </tr>
+        </table>";
        
-        include "file_author.php";
         ?>
     </main>
     <br>
