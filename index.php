@@ -52,9 +52,9 @@
 
         <center><h1> Shop Our Most Popular Shoes! </h1>
 
-        <a class= "active" href="product.php"> <img src="nike.png" width="350" height="200"> </a>
-        <a class= "active" href="product.php"> <img src="nike2.png" width="350" height="200"> </a>
-        <a class= "active" href="product.php"> <img src="yeezy.png" width="350" height="200"> </a>
+        <img src="nike.png" width="350" height="200">
+        <img src="nike2.png" width="350" height="200">
+        <img src="yeezy.png" width="350" height="200">
 
         </center>
 
