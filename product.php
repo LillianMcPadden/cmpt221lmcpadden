@@ -15,7 +15,12 @@
             h3 { color:rgb(220, 26, 34);font-size: 25px;font-family: Monaco;}
             header {background-color:rgb(220, 26, 34);}
             footer {background-color:rgb(245, 255, 245);}
-            th {font-family: Papyrus;}
+           th {font-family: Papyrus; padding: 5px 5px 5px 5px; font-weight:2300; font-size: 25px;}
+            td {padding: 5px 5px 5px 5px;font-size: 25px;} 
+            form { font-family: Monaco;font-size: 25px;}
+           .tableoutline{background-color:rgb(220, 26, 34);}
+           .tableheader{background:rgb(249, 208, 208 );}
+           .redcolor{color:rgb(220, 26, 34);}
         </style>
     </head>
     <body>
@@ -56,11 +61,11 @@
             $dir = " ";
         }
 
-        echo "<br><br><h3>Display the Product Table </h3>";
+        echo "<br><br><h1 class='redcolor'>Display the Product Table </h1>";
         $q = "Select * from t5_product $sort_type $dir";
         $r = mysqli_query($dbc, $q);
 
-        echo " <table border = '2' cellpadding = '2' border-spacing = '0px 0'> <tr><th> product_ID </th><th> our_price </th><th> color </th><th> quantity </th><th> shoe_cond  </th> <th> size </th><th> brand </th><th> style_num </th><th> listing_price </th><th> deleted </th></tr>";
+        echo " <table border = 1 class = 'tableoutline'> <tr><th class='tableheader'> product_ID </th><th class='tableheader'> our_price </th><th class='tableheader'> color </th><th class='tableheader'> quantity </th><th class='tableheader'> shoe_cond  </th> <th class='tableheader'> size </th><th class='tableheader'> brand </th><th class='tableheader'> style_num </th><th class='tableheader'> listing_price </th><th class='tableheader'> deleted </th></tr>";
         if($r ){
             while ($row= mysqli_fetch_array($r, MYSQLI_NUM))
             {
