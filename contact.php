@@ -22,7 +22,7 @@
     <body>
     <!-- Logo to for the website-->
     <header>
-        <center><img src="logo.png"; width = "100%"; height = 300px></center>
+        <center><img src="logo.png"; width = 1100px; height = 250px></center>
         
     </header>
     <!-- Will become links to navigate the website-->
