@@ -65,11 +65,11 @@
         $q = "Select * from t5_product $sort_type $dir";
         $r = mysqli_query($dbc, $q);
 
-        echo " <table border = 1 class = 'tableoutline'> <tr><th class='tableheader'> Product ID </th><th class='tableheader'> Our Price </th><th class='tableheader'> Color </th><th class='tableheader'> Quantity </th><th class='tableheader'> Shoe Condition  </th> <th class='tableheader'> Size </th><th class='tableheader'> Brand </th><th class='tableheader'> Style Number </th><th class='tableheader'> Listing Price </th><th class='tableheader'> deleted </th></tr>";
+        echo " <table border = 1 class = 'tableoutline'> <tr><th class='tableheader'> Product ID </th><th class='tableheader'> Our Price </th><th class='tableheader'> Color </th><th class='tableheader'> Quantity </th><th class='tableheader'> Shoe Condition  </th> <th class='tableheader'> Size </th><th class='tableheader'> Brand </th><th class='tableheader'> Style Number </th><th class='tableheader'> Listing Price </th><th class='tableheader'> deleted </th>";
         if($r ){
             while ($row= mysqli_fetch_array($r, MYSQLI_NUM))
             {
-                echo "<tr><td>". $row[0] . "</td><td>". $row[1]. "</td><td>". $row[2]. "</td><td>". $row[3] . "</td><td>". $row[4]. "</td><td>". $row[5]. "</td><td> ". $row[6]. "</td><td>". $row[7]. "</td><td>". $row[8]. "</td></tr>";
+                echo "<tr><td>". $row[0] . "</td><td>". $row[1]. "</td><td>". $row[2]. "</td><td>". $row[3] . "</td><td>". $row[4]. "</td><td>". $row[5]. "</td><td> ". $row[6]. "</td><td>". $row[7]. "</td><td>". $row[8]. "</td><td>" . $row[9] . "</td></tr>";
             }
         }
         echo "</table>";
