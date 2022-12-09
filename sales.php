@@ -51,6 +51,8 @@
 
         require "connect_db.php";
 
+            
+        #initialize sort and direction to hold how the user wants to display table 
         if(ISSET($_POST['sort'])){
             $sort_type = " ORDER BY ". $_POST['sort'];
         }
@@ -66,9 +68,11 @@
 
 
         echo "<br><br><h1 class='redcolor'>Display the Supplier Table </h1>";
+            
+        # set query based on form input from user 
         $q = "Select * from t5_supplier".  $sort_type . " " . $dir;
 
-
+        # print table row by row 
         $r = mysqli_query($dbc, $q);
         echo " <table border = 1 class = 'tableoutline'> <tr> <th class='tableheader'> Supplier ID </th> <th class='tableheader'> Supplier Name </th> <th class='tableheader'> Supplier Address </th> <th class='tableheader'> Number of Sales </th> <th class='tableheader'> Supplier Email </th> <th class='tableheader'> Supplier Phone Number </th><th class='tableheader'> Deleted </th>";
         if($r ){
@@ -79,7 +83,7 @@
         }
         echo "</table>";
 
-
+        # form to allow user to select how to sort the table 
         echo "<form action = '' method = 'POST'>";
         echo "<br> <input type = 'submit' value = 'Sort it!' style = 'background-color:rgb(220, 26, 34); color:white;'>";
         echo "<input type = 'radio' name = 'sort' value = 'supplier_id'>    ID";
