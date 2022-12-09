@@ -55,6 +55,7 @@
         if (isset($_SESSION['login_status'])){
             echo"<h1><a class= 'active' href='explain_tables.php'> Explain Tables</a></h1>";
             echo"<h1><a class= 'active' href='user.php'> Users Table</a></h1>";
+            echo"<h1><a class= 'active' href='add_customer.php'> Add Row to Customer</a></h1>";
         } else{
             echo "<br> You have not logged in yet!";
             echo "<br> Please log in at link below in order to change tables or add to the tables!";
