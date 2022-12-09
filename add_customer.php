@@ -91,7 +91,7 @@
 
             if ($id == "")   {$error_message = "<h3 style='color:red'> The id cannot be blank! </h3>";}
             if ($lname == "") {$error_message = "<h3 style='color:red'> The last name cannot be blank! </h3>";}
-            if ($fname == "") {$error_message = "<h3 style='color:red'> The firrst name cannot be blank! </h3>";}
+            if ($fname == "") {$error_message = "<h3 style='color:red'> The first name cannot be blank! </h3>";}
             if ($add == "") {$error_message = "<h3 style='color:red'> The address cannot be blank! </h3>";}
             if ($email == "") {$error_message = "<h3 style='color:red'> The email cannot be blank! </h3>";}
             if ($dele == "") {$error_message = "<h3 style='color:red'> The delete cannot be blank! </h3>";}
