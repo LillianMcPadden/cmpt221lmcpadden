@@ -44,6 +44,8 @@
             require "../connect_db.php";
             require "../error_handler.php";
 
+            $FILE_AUTHOR="Veronica Longley";
+
             $error_message = "";
         
         
@@ -135,6 +137,8 @@
             else {
                 echo "$error_message";  
             }
+
+        include "file_author.php";
         ?>
 </main>
 </body>
