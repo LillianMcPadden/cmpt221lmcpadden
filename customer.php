@@ -9,6 +9,7 @@
             Stellar Sneakers Homepage
         </title>
         <meta charset="utf-8">
+        <!-- style for the page -->
         <style>
             * {background-color: rgb(255, 255, 255);}
             h1 { color : black; font-family: Papyrus;font-size: 45px;}
@@ -26,7 +27,7 @@
     <body>
     <!-- Logo to for the website-->
     <header>
-        <center><img src="logo.png"; width = 1100px; height = 250px></center>
+        <center><img src="logo.png"; width = "100%"; height = 300px></center>
         
     </header>
     <!-- Will become links to navigate the website-->
@@ -47,8 +48,10 @@
          <?php
         $FILE_AUTHOR="Sorin Macaluso";
 
-        require "connect_db.php";
+        //the requires do the connnection to the database
+        require "../connect_db.php";
 
+        //insialiing all varuables needed
         if(ISSET($_POST['sort'])){
             $sort_type = " ORDER BY ". $_POST['sort'];
         }
@@ -62,7 +65,7 @@
             $dir = " ";
         }
 
-
+        //the query and echo out the result as a html table
         echo "<br><br><h1 class='redcolor'>Display the Customer Table </h1>";
         $q = "Select * from t5_customer".  $sort_type . " " . $dir;
 
@@ -77,7 +80,7 @@
         }
         echo "</table>";
 
-
+        //the radio buttons that are needed to sort the table in the way the user wants
         echo "<form action = '' method = 'POST'>";
         echo "<br> <input type = 'submit' value = 'Sort it!' style = 'background-color:rgb(220, 26, 34); color:white;'>";
         echo "<input type = 'radio' name = 'sort' value = 'customer_id'>    Customer ID";
