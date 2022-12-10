@@ -15,6 +15,7 @@
             h3 { color:rgb(220, 26, 34);font-size: 25px;font-family: Monaco;}
             header {background-color:rgb(220, 26, 34);}
             footer {background-color:rgb(245, 255, 245);}
+            th {font-family: Papyrus;}
         </style>
             </head>
     <body>
@@ -48,7 +49,7 @@
 
             $error_message = "";
         
-            #initialize all variables to insert 
+        
             if (ISSET($_POST ["supplier_id"])) {
                 $supplier_id = $_POST ["supplier_id"];
             }
@@ -97,8 +98,7 @@
             else {
                 $deleted = " ";
             }
-            
-            #set error message if a field is left blank
+
             if ($supplier_id == "")   {$error_message = "<h3 style='color:red'> The id cannot be blank! </h3>";}
             if ($supName == "") {$error_message = "<h3 style='color:red'> The name cannot be blank! </h3>";}
             if ($supAddress == "") {$error_message = "<h3 style='color:red'> The address cannot be blank! </h3>";}
@@ -108,8 +108,7 @@
             if ($deleted == "") {$error_message = "<h3 style='color:red'> The delete cannot be blank! </h3>";}
 
             echo "<h1> Add A Row to Supplier </h1>";
-            
-            #form to gather data to add to table 
+        
             echo "<form action = '' method = 'POST'>";
             echo "<br> Enter the Supplier Id <input type = 'number' name = 'supplier_id' min='0'>";
             echo "<br>";
@@ -123,12 +122,12 @@
             echo "<br>";
             echo "<br> Enter the Phone Number <input type = 'text' name = 'supPhone_num'>";
             echo "<br>";
-            echo "<br> Enter either y for yes or n for no <input type = 'text' name = 'deleted' max='1'>";
+            echo "<br> Enter y to be an active supplier or n to be a supplier in the future <input type = 'text' name = 'deleted' max='1'>";
             echo "<br>";
             echo "<br><br><input type = 'submit' value = 'Submit Me!' style='background-color: red; color: white'>";
             echo "</form>";
 
-            #if the error message is blank insert into table
+            
             if ($error_message =="") {
                 $q = "INSERT INTO t5_supplier VALUES ('$supplier_id', '$supName', '$supAddress', '$number_of_sales', '$supEmail', '$supPhone_num', '$deleted')";
                 $r = mysqli_query($dbc, $q);
@@ -136,7 +135,6 @@
                 if($r) {echo "Values successfully inserted!";}
                 else {echo "Unable to insert into the table!";}
             }
-            #if error message is not blank print it
             else {
                 echo "$error_message";  
             }
