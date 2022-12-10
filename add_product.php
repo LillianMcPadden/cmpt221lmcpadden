@@ -46,19 +46,19 @@
 
             $error_message = "";
         
-        
-            if (ISSET($_POST ["prodid"])) {
-                $prodid = $_POST ["prodid"];
+            # initializes all variables
+            if (ISSET($_POST ["id"])) {
+                $id = $_POST ["id"];
             }
             else {
-                $prodid = " ";
+                $id = " ";
             }
 
-            if (ISSET($_POST ["ourprice"])) {
-                $ourprice = $_POST ["ourprice"];
+            if (ISSET($_POST ["price"])) {
+                $price = $_POST ["price"];
             }
             else {
-                $ourprice = " ";
+                $price = " ";
             }
 
             if (ISSET($_POST ["color"])) {
@@ -103,11 +103,11 @@
                 $stylenum = " ";
             }
 
-            if (ISSET($_POST ["listingprice"])) {
-                $listing_price = $_POST ["listingprice"];
+            if (ISSET($_POST ["lprice"])) {
+                $lprice = $_POST ["lprice"];
             }
             else {
-                $listing_price = " ";
+                $lprice = " ";
             }
 
             if (ISSET($_POST ["dele"])) {
@@ -123,25 +123,26 @@
             else {
                 $supplier = " ";
             }
-
-            if ($prodid == "")   {$error_message = "<h3 style='color:red'> The product id cannot be blank! </h3>";}
-            if ($ourprice == "") {$error_message = "<h3 style='color:red'> Our price cannot be blank! </h3>";}
+            #checks to make sure none of the slots are blank
+            if ($id == "")   {$error_message = "<h3 style='color:red'> The product id cannot be blank! </h3>";}
+            if ($price == "") {$error_message = "<h3 style='color:red'> Our price cannot be blank! </h3>";}
             if ($color == "") {$error_message = "<h3 style='color:red'> Color cannot be blank! </h3>";}
             if ($quantity == "") {$error_message = "<h3 style='color:red'> The quantity cannot be blank! </h3>";}
             if ($shoecond == "") {$error_message = "<h3 style='color:red'> The shoe condition cannot be blank! </h3>";}
             if ($size == "") {$error_message = "<h3 style='color:red'> The size cannot be blank! </h3>";}
             if ($brand == "") {$error_message = "<h3 style='color:red'> The brand cannot be blank! </h3>";}
             if ($stylenum == "") {$error_message = "<h3 style='color:red'> The style number cannot be blank! </h3>";}
-            if ($listing_price == "") {$error_message = "<h3 style='color:red'> The listing price cannot be blank! </h3>";}
+            if ($lprice == "") {$error_message = "<h3 style='color:red'> The listing price cannot be blank! </h3>";}
             if ($dele == "") {$error_message = "<h3 style='color:red'> The delete cannot be blank! </h3>";}
             if ($supplier == "") {$error_message = "<h3 style='color:red'> The supplier cannot be blank! </h3>";}
             
+            #creates form for admin to add info about the product to be added
             echo "<h1> Add A Row to Products </h1>";
         
             echo "<form action = '' method = 'POST'>";
-            echo "<br> Enter the product id <input type = 'number' name = 'prodid' min='0'>";
+            echo "<br> Enter the product id <input type = 'number' name = 'id' min='0'>";
             echo "<br>";
-            echo "<br> Enter the selling price <input type = 'number' name = 'ourprice' min='0'>";
+            echo "<br> Enter the selling price <input type = 'number' name = 'price' min='0'>";
             echo "<br>";
             echo "<br> Enter the color <select name = 'color'>";
             echo "<option value='white'>White</option>";
@@ -179,20 +180,20 @@
             echo "</select><br>";
             echo "<br> Enter the style number <input type = 'number' name = 'stylenum' min='0'>";
             echo "<br>";
-            echo "<br> Enter the listing price <input type = 'number' name = 'listingprice' min='0'>";
+            echo "<br> Enter the listing price <input type = 'number' name = 'lprice' min='0'>";
             echo "<br>";
             echo "<br> Has the product been deleted? <select type = 'dele'>";
             echo "<option value='yes'>Yes</option>";
             echo "<option value='no'>No</option>";
             echo "</select><br>";
-            echo "<br> Enter the supplier <input type = 'text' name = 'supplier' max='100'>";
+            echo "<br> Enter the supplier <input type = 'text' name = 'supplier'>";
             echo "<br>";
             echo "<br><br><input type = 'submit' value = 'Add to table!' style='background-color: red; color: white'>";
             echo "</form>";
 
-            
+            #if no errors, add values into the t5_product database
             if ($error_message =="") {
-                $q = "INSERT INTO t5_product VALUES ('$prodid', '$ourprice', '$color', '$quantity', '$shoecond', '$size', '$brand', '$stylenum', '$listing_price', '$dele', '$supplier')";
+                $q = "INSERT INTO t5_product VALUES ('$id', '$price', '$color', '$quantity', '$shoecond', '$size', '$brand', '$stylenum', '$lprice', '$dele', '$supplier')";
                 $r = mysqli_query($dbc, $q);
 
                 if($r) {echo "Values successfully inserted!";}
