@@ -9,6 +9,7 @@
             Stellar Sneakers Homepage
         </title>
         <meta charset="utf-8">
+        <!-- style for the page -->
        <style>
             * {background-color: rgb(255, 255, 255);}
             h1 { color : black; font-family: Papyrus;font-size: 45px;}
@@ -41,14 +42,13 @@
         <br>
         
         <?php
+            //requiring for the files to connect to database and error_handling
             require "../connect_db.php";
-            require "../error_handler.php";
-            
-            $FILE_AUTHOR="Sorin Macaluso";
+            require "error_handler.php";
 
             $error_message = "";
         
-        
+            //inilizing variable needed for the program
             if (ISSET($_POST ["id"])) {
                 $id = $_POST ["id"];
             }
@@ -91,15 +91,18 @@
                 $dele = " ";
             }
 
+            //all the error messages for the inout fields for if there is a blank value
             if ($id == "")   {$error_message = "<h3 style='color:red'> The id cannot be blank! </h3>";}
             if ($lname == "") {$error_message = "<h3 style='color:red'> The last name cannot be blank! </h3>";}
-            if ($fname == "") {$error_message = "<h3 style='color:red'> The first name cannot be blank! </h3>";}
+            if ($fname == "") {$error_message = "<h3 style='color:red'> The firrst name cannot be blank! </h3>";}
             if ($add == "") {$error_message = "<h3 style='color:red'> The address cannot be blank! </h3>";}
             if ($email == "") {$error_message = "<h3 style='color:red'> The email cannot be blank! </h3>";}
             if ($dele == "") {$error_message = "<h3 style='color:red'> The delete cannot be blank! </h3>";}
 
+            //header
             echo "<h1> Add A Row to Customer </h1>";
-        
+            
+            //form for the input fields to add the new data to the table
             echo "<form action = '' method = 'POST'>";
             echo "<br> Enter the Customer Id <input type = 'number' name = 'id' min='0'>";
             echo "<br>";
@@ -116,7 +119,7 @@
             echo "<br><br><input type = 'submit' value = 'Submit Me!' style='background-color: red; color: white'>";
             echo "</form>";
 
-            
+            //inserting the new data into the table and a error message if there was a problem with the insert
             if ($error_message =="") {
                 $q = "INSERT INTO t5_customer VALUES ('$id', '$lname', '$fname', '$add', '$email', '$dele')";
                 $r = mysqli_query($dbc, $q);
@@ -124,10 +127,11 @@
                 if($r) {echo "Values successfully inserted!";}
                 else {echo "Unable to insert into the table!";}
             }
-            else {
+            else { 
+                //echoing out the error message if something is blank
                 echo "$error_message";  
             }
-            
+
             include "file_author.php";
         ?>
 </main>
