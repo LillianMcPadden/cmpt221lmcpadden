@@ -16,6 +16,7 @@
             h3 { color:rgb(220, 26, 34);font-size: 25px;font-family: Monaco;}
             header {background-color:rgb(220, 26, 34);}
             footer {background-color:rgb(245, 255, 245);}
+            th {font-family: Papyrus;}
         </style>
             </head>
     <body>
