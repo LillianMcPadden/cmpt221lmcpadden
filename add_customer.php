@@ -73,8 +73,8 @@
         
         <?php
             //requiring for the files to connect to database and error_handling
-            require "../connect_db.php";
-            require "../error_handler.php";
+            require "connect_db.php";
+            require "error_handler.php";
             
             //initializing variables
             $FILE_AUTHOR="Sorin Macaluso";
