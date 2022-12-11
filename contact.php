@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!--    t5homepage.html   Homepage
+<!--    t5homepage.html   Contact Page
     09/21/2022 t5 Original Program
 -->
 <html lang="en">
 
     <head>
         <title>
-            Stellar Sneakers Contact
+            Contact
         </title>
         <meta charset="utf-8">
         <style>
@@ -25,7 +25,7 @@
         <center><img src="logo.png"; width = 1100px; height = 250px></center>
         
     </header>
-    <!-- Will become links to navigate the website-->
+    <!-- Links to navigate the website-->
     <main>
         <br>
         <center><table border=0></center>
@@ -41,12 +41,11 @@
         </table>
         <br>
         
-        <!-- start of the new code -->
+       
         <h1> Contact Us </h1>
-        <hr>
         <h3> Please direct any questions, concerns, or comments to the following: <h3>
         <h4><p> Phone Number: (123) 456-7777 </h4>
-        <h4> <a href="mailto: stellarsneakersservice@gmail.com" style=color:black> Email Us</a> </h4>
+        <h4> <a href="mailto: stellarsneakersservice@gmail.com" style=color:black> or Email Us</a> </h4>
       
         <?php
         $FILE_AUTHOR="Maeve Lonergan";
