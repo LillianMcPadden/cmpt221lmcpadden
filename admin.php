@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!--    t5homepage.html   Homepage
+<!--    t5homepage.html   Admin Page
     09/21/2022 t5 Original Program
 -->
 <html lang="en">
 
     <head>
         <title>
-            Stellar Sneakers Admin
+            Admin
         </title>
         <meta charset="utf-8">
         <style>
@@ -24,7 +24,7 @@
         <center><img src="logo.png"; width = 1100px; height = 250px></center>
         
     </header>
-    <!-- Will become links to navigate the website-->
+    <!-- Links to navigate the website-->
     <main>
         <br>
         <center><table border=0></center>
@@ -40,11 +40,11 @@
         </table>
         <br>
         
-        <!-- start of the new code -->
         <?php
         session_start();
         $FILE_AUTHOR="Maeve Lonergan";
 
+        //session variable for login status
         if (isset($_SESSION['login_status'])){
             $login_status = $_SESSION['login_status'];
           } else{
@@ -52,10 +52,35 @@
           }
             echo "<br>" . $login_status;
 
+        //can only view/access contents if logged in
         if (isset($_SESSION['login_status'])){
-            echo"<h1><a class= 'active' href='explain_tables.php'> Explain Tables</a></h1>";
-            echo"<h1><a class= 'active' href='user.php'> Users Table</a></h1>";
-            echo"<h1><a class= 'active' href='add_customer.php'> Add Row to Customer</a></h1>";
+            echo "<form action='explain_tables.php' method = 'POST'>";
+            echo "<br><br> <input type='submit' value='Explain Tables' name='submit' style='background-color:rgb(220, 26, 34); color:white;font-family: Monaco;font-size: 45px;'>";
+            echo "</form>";
+
+            echo "<form action='user.php' method = 'POST'>";
+            echo "<br><br> <input type='submit' value='View Users Table' name='submit' style='background-color:rgb(220, 26, 34); color:white;font-family: Monaco;font-size: 45px;'>";
+            echo "</form>";
+
+            echo "<br>";
+            echo "<h1> Add row to: </h1>";
+            
+            echo "<form action='add_customer.php' method = 'POST'>";
+            echo "<input type='submit' value='Customers Table' name='submit' style='background-color:rgb(220, 26, 34); color:white;font-family: Monaco;font-size: 30px;'>";
+            echo "</form>";
+
+            echo "<form action='add_user.php' method = 'POST'>";
+            echo "<input type='submit' value='Users Table' name='submit' style='background-color:rgb(220, 26, 34); color:white;font-family: Monaco;font-size: 30px;'>";
+            echo "</form>";
+
+            echo "<form action='add_product.php' method = 'POST'>";
+            echo "<input type='submit' value='Products Table' name='submit' style='background-color:rgb(220, 26, 34); color:white;font-family: Monaco;font-size: 30px;'>";
+            echo "</form>";
+
+            echo "<form action='add_supplier.php' method = 'POST'>";
+            echo " <input type='submit' value='Suppliers Table' name='submit' style='background-color:rgb(220, 26, 34); color:white;font-family: Monaco;font-size: 30px;'>";
+            echo "</form>";
+        //required to login
         } else{
             echo "<br> You have not logged in yet!";
             echo "<br> Please log in at link below in order to change tables or add to the tables!";
@@ -65,6 +90,8 @@
              <th><a class= 'active' href='login.php'> Login</a></th>
          </tr>
         </table>";
+
+        include "footer.php";
         ?>
     </main>
     <br>
