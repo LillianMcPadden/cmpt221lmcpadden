@@ -6,7 +6,7 @@
 
     <head>
         <title>
-            Stellar Sneakers Admin
+            Table Explanations
         </title>
         <meta charset="utf-8">
         <style>
@@ -15,12 +15,13 @@
             h3 { color:rgb(220, 26, 34);font-size: 25px;font-family: Monaco;}
             header {background-color:rgb(220, 26, 34);}
             footer {background-color:rgb(245, 255, 245);}
-           th {font-family: Papyrus; padding: 5px 5px 5px 5px; font-weight:2300; font-size: 25px;}
+            th {font-family: Papyrus; padding: 5px 5px 5px 5px; font-weight:2300; font-size: 25px;}
             td {padding: 5px 5px 5px 5px;font-size: 25px;} 
             form { font-family: Monaco;font-size: 25px;}
-           .tableoutline{background-color:rgb(220, 26, 34);}
-           .tableheader{background:rgb(249, 208, 208 );}
-           .redcolor{color:rgb(220, 26, 34);}
+           .tableoutline {background-color:rgb(220, 26, 34);}
+           .tableheader {background:rgb(249, 208, 208 );}
+           .redcolor {color:rgb(220, 26, 34);}
+           .test {font-family: Papyrus; font-size:16px; padding: 0px 0px 0px 0px;  }
         </style>
     </head>
     <body>
@@ -29,24 +30,22 @@
         <center><img src="logo.png"; width = 1100px; height = 250px></center>
         
     </header>
-    <!-- Will become links to navigate the website-->
+    <!-- Links to navigate the website-->
     <main>
         <br>
         <center><table border=0></center>
         <table style = "border-collapse: separate; border-spacing: 150px 0;">
             <tr>
-                <th><a class= "active" href="index.php"> Home</a></th>
-                <th><a class= "active" href="tables.php"> Tables</a></th>
-                <th><a class= "active" href="contact.php"> Contact</a></th>
-                <th><a class= "active" href="admin.php"> Admin</a></th>
-                <th><a class= "active" href="login.php"> Login</a></th>
-                <th><a class= "active" href="logout.php"> Logout</a></th>
+                <th class='test'><a class= "active" href="index.php"> Home</a></th>
+                <th class='test'><a class= "active" href="tables.php"> Tables</a></th>
+                <th class='test'><a class= "active" href="contact.php"> Contact</a></th>
+                <th class='test'><a class= "active" href="admin.php"> Admin</a></th>
+                <th class='test'><a class= "active" href="login.php"> Login</a></th>
+                <th class='test'><a class= "active" href="logout.php"> Logout</a></th>
             </tr>
         </table>
         
         <br>
-        
-        <!-- start of the new code -->
     
            
         <?php
@@ -54,6 +53,7 @@
           
             require "connect_db.php";
 
+            //form for user to chose table to explain
             echo "<h3> Choose a table to view its explanation </h3>";
             echo "<form action = '' method = 'POST'>";
             echo "<input type = 'radio' name = 'sort' value = 'customers'> Customers Table";
@@ -65,7 +65,8 @@
             echo "<br> <input type = 'submit' value = 'Explain' style = 'background-color:rgb(220, 26, 34); color:white; height:40px; width:150px;font-family: Monaco; font-size: 25px;'>";
             echo "</form>";
             echo "<br>";
-            
+
+            //display table based on user selection
             if (isset($_POST['sort'])){
                 if ($_POST['sort']=='customers'){
                     echo "<hr>";
