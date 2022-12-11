@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!--    t5homepage.html   Homepage
+<!--    t5homepage.html   User Table
     09/21/2022 t5 Original Program
 -->
 <html lang="en">
 
     <head>
         <title>
-            Stellar Sneakers Homepage
+            Users
         </title>
         <meta charset="utf-8">
         <style>
@@ -18,9 +18,10 @@
             th {font-family: Papyrus; padding: 5px 5px 5px 5px; font-weight:2300; font-size: 25px;}
             td {padding: 5px 5px 5px 5px;font-size: 25px;} 
             form { font-family: Monaco;font-size: 15px;}
-           .tableoutline{background-color:rgb(220, 26, 34);}
-           .tableheader{background:rgb(249, 208, 208 );}
-           .redcolor{color:rgb(220, 26, 34);}
+           .tableoutline {background-color:rgb(220, 26, 34);}
+           .tableheader {background:rgb(249, 208, 208 );}
+           .redcolor {color:rgb(220, 26, 34);}
+           .test {font-family: Papyrus; font-size:16px; padding: 0px 0px 0px 0px;  }
         </style>
     </head>
     <body>
@@ -29,18 +30,18 @@
         <center><img src="logo.png"; width = 1100px; height = 250px></center>
         
     </header>
-    <!-- Will become links to navigate the website-->
+    <!-- Links to navigate the website-->
     <main>
         <br>
         <center><table border=0></center>
         <table style = "border-collapse: separate; border-spacing: 150px 0;">
             <tr>
-                <th><a class= "active" href="index.php"> Home</a></th>
-                <th><a class= "active" href="tables.php"> Tables</a></th>
-                <th><a class= "active" href="contact.php"> Contact</a></th>
-                <th><a class= "active" href="admin.php"> Admin</a></th>
-                <th><a class= "active" href="login.php"> Login</a></th>
-                <th><a class= "active" href="logout.php"> Logout</a></th>
+                <th class='test'><a class= "active" href="index.php"> Home</a></th>
+                <th class='test'><a class= "active" href="tables.php"> Tables</a></th>
+                <th class='test'><a class= "active" href="contact.php"> Contact</a></th>
+                <th class='test'><a class= "active" href="admin.php"> Admin</a></th>
+                <th class='test'><a class= "active" href="login.php"> Login</a></th>
+                <th class='test'><a class= "active" href="logout.php"> Logout</a></th>
             </tr>
         </table>
         <br>
@@ -49,6 +50,7 @@
 
         require "connect_db.php";
 
+        //initialize variables
         if(ISSET($_POST['sort'])){
             $sort_type = " ORDER BY ". $_POST['sort'];
         }
@@ -62,7 +64,7 @@
             $dir = " ";
         }
 
-
+        //print users table
         echo "<h1 class='redcolor'>Users </h1>";
         $q = "Select * from t5_user".  $sort_type . " " . $dir;
 
@@ -77,22 +79,29 @@
         }
         echo "</table>";
 
-        echo "<br><h1 class='redcolor'>Sort table</h1>";
+        //options to sort table
+        echo "<h1 class='redcolor'>Sort table</h1>";
         echo "<form action = '' method = 'POST'>";
         echo "<p class='redcolor'>TABLE COLUMN</p>";
         echo "<input type = 'radio' name = 'sort' value = 'username'>    Username";
-        echo "<br><input type = 'radio' name = 'sort' value = 'passwrd'>    Password";
-        echo "<br><input type = 'radio' name = 'sort' value = 'passwrd_reset'>    Password reset date";
-        echo "<br><input type = 'radio' name = 'sort' value = 'title'>    Job title";
-        echo "<br><input type = 'radio' name = 'sort' value = 'monthly_report'>    Monthly Report";
-        echo "<br><input type = 'radio' name = 'sort' value = 'deleted'>    Deleted";
-        echo "<br><input type = 'radio' name = 'sort' value = 'email'>    Email";
-        echo "<br><input type = 'radio' name = 'sort' value = 'lastchanged'>    Date of last password change";
-        echo "<br><input type = 'radio' name = 'sort' value = 'password_type'>    Type of password";
-        echo "<p class='redcolor'>DIRECTION</p>";
+        echo "<input type = 'radio' name = 'sort' value = 'passwrd'>    Password";
+        echo "<input type = 'radio' name = 'sort' value = 'passwrd_reset'>    Password reset date";
+        echo "<input type = 'radio' name = 'sort' value = 'title'>    Job title";
+        echo "<input type = 'radio' name = 'sort' value = 'monthly_report'>    Monthly Report";
+        echo "<input type = 'radio' name = 'sort' value = 'deleted'>    Deleted";
+        echo "<input type = 'radio' name = 'sort' value = 'email'>    Email";
+        echo "<input type = 'radio' name = 'sort' value = 'lastchanged'>    Date of last password change";
+        echo "<input type = 'radio' name = 'sort' value = 'password_type'>    Type of password";
+        echo "<br><p class='redcolor'>DIRECTION</p>";
         echo "<input type = 'radio' name = 'direction' value = 'ASC'>    Ascending";
-        echo "<br><input type = 'radio' name = 'direction' value = 'DESC'>    Descending";
+        echo "<input type = 'radio' name = 'direction' value = 'DESC'>    Descending";
         echo "<br><br> <input type = 'submit' value = 'Sort it!' style = 'background-color:rgb(220, 26, 34); color:white;font-family: Monaco;font-size: 15px; '>";
+        echo "</form>";
+
+      
+        //button to add row
+        echo "<form action='add_user.php' method = 'POST'>";
+        echo "<br><br> <input type='submit' value='Add a Row' name='submit' style='background-color:rgb(220, 26, 34); color:white;font-family: Monaco;font-size: 45px;'>";
         echo "</form>";
         include "file_author.php";
         ?>
