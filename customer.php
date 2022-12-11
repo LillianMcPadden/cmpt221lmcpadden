@@ -98,6 +98,7 @@
         echo "<br><br> <input type = 'submit' value = 'Sort it!' style = 'background-color:rgb(220, 26, 34); color:white;font-family: Monaco;font-size: 15px; '>";
         echo "</form>";
 
+        //button to add row
         echo "<form action='add_customer.php' method = 'POST'>";
         echo "<br><br> <input type='submit' value='Add a Row' name='submit' style='background-color:rgb(220, 26, 34); color:white;font-family: Monaco;font-size: 45px;'>";
         echo "</form>";
