@@ -6,7 +6,7 @@
 
     <head>
         <title>
-            Stellar Sneakers Homepage
+            Stellar Sneakers 
         </title>
         <meta charset="utf-8">
         <style>
@@ -16,6 +16,7 @@
             header {background-color:rgb(220, 26, 34);}
             footer {background-color:rgb(245, 255, 245);}
             th {font-family: Papyrus;}
+           
         </style>
     </head>
     <body>
@@ -24,14 +25,14 @@
         <center><img src="logo.png"; width= 1100px; height = 250px></center>
         
     </header>
-    <!-- Will become links to navigate the website-->
+    <!-- Links to navigate the website-->
     <main>
         <br>
-        <center><table border=0></center>
+        <center><table border=0 ></center>
         <table style = "border-collapse: separate; border-spacing: 150px 0;">
             <tr>
-            <th><a class= "active" href="index.php"> Home</a></th>
-            <th><a class= "active" href="tables.php"> Tables</a></th>
+                <th><a class= "active" href="index.php"> Home</a></th>
+                <th><a class= "active" href="tables.php"> Tables</a></th>
                 <th><a class= "active" href="contact.php"> Contact</a></th>
                 <th><a class= "active" href="admin.php"> Admin</a></th>
                 <th><a class= "active" href="login.php"> Login</a></th>
@@ -70,6 +71,5 @@
     </main>
 
     <br>
-    <!-- Copy right-->
     </body>
 </html>
