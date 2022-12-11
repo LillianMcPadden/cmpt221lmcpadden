@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!--    t5homepage.html   Homepage
+<!--    t5homepage.html   Login Page
     09/21/2022 t5 Original Program
 -->
 <html lang="en">
 
     <head>
         <title>
-            Stellar Sneakers Login
+            Login
         </title>
         <meta charset="utf-8">
         <style>
@@ -24,7 +24,7 @@
         <center><img src="logo.png"; width = 1100px; height = 250px></center>
         
     </header>
-    <!-- Will become links to navigate the website-->
+    <!-- Links to navigate the website-->
     <main>
         <br>
         <center><table border=0></center>
@@ -40,7 +40,7 @@
         </table>
         <br>
         
-        <!-- start of the new code -->
+     
        <?php 
        session_start();
        $FILE_AUTHOR = "Maeve Lonergan";
@@ -88,7 +88,7 @@
         echo "<br> Enter your password <input value = '$user_password' type='password' name='user_password'>";
 
         //sumbit button
-        echo "<br><input type='submit' value='Submit Me!' style='background-color:red;color:white'>";
+        echo "<br><input type='submit' value='Log in!' style='background-color:red;color:white'>";
 
         //end form
         echo "</form>";
