@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!--    t5homepage.html   Homepage
+<!--    t5homepage.html   Logout Page
     09/21/2022 t5 Original Program
 -->
 <html lang="en">
 
     <head>
         <title>
-            Stellar Sneakers Login
+            Logout
         </title>
         <meta charset="utf-8">
         <style>
@@ -24,7 +24,7 @@
         <center><img src="logo.png"; width = 1100px; height = 250px></center>
         
     </header>
-    <!-- Will become links to navigate the website-->
+    <!-- Links to navigate the website-->
     <main>
         <br>
         <center><table border=0></center>
@@ -40,10 +40,10 @@
         </table>
         <br>
         
-        <!-- start of the new code -->
+      
        <?php 
        session_start();
-       $FILE_AUTHOR = "Maeve Lonergan";
+       $FILE_AUTHOR = "Sorin Macaluso";
 
     //connect to site_db
     require "connect_db.php";
