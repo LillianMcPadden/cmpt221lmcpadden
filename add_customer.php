@@ -25,8 +25,37 @@
         <center><img src="logo.png"; width = "1100px"; height = 250px></center>
 
         
+    <!DOCTYPE html>
+<!--    t5homepage.html   Add Row to Customer Table
+    09/21/2022 t5 Original Program
+-->
+    <html lang="en">
+
+    <head>
+        <title>
+            Add Row: Customer
+        </title>
+        <meta charset="utf-8">
+
+        <!-- style for the page -->
+       <style>
+            * {background-color: rgb(255, 255, 255);}
+            h1 { color : black; font-family: Papyrus;font-size: 45px;}
+            h3 { color:rgb(220, 26, 34);font-size: 25px;font-family: Monaco;}
+            header {background-color:rgb(220, 26, 34);}
+            footer {background-color:rgb(245, 255, 245);}
+            th {font-family: Papyrus; font-size:16px; padding: 0px 0px 0px 0px;  }
+        </style>
+
+    </head>
+    <body>
+
+    <!-- Logo to for the website-->
+    <header>
+        <center><img src="logo.png"; width = "1100px"; height = 250px></center>
     </header>
-    <!-- Will become links to navigate the website-->
+
+    <!-- Links to navigate the website-->
     <main>
         <br>
         <center><table border=0></center>
@@ -45,11 +74,13 @@
         <?php
             //requiring for the files to connect to database and error_handling
             require "../connect_db.php";
-            require "error_handler.php";
-
+            require "../error_handler.php";
+            
+            //initializing variables
+            $FILE_AUTHOR="Sorin Macaluso";
             $error_message = "";
         
-            //inilizing variable needed for the program
+            //initializing variables needed for the program
             if (ISSET($_POST ["id"])) {
                 $id = $_POST ["id"];
             }
@@ -95,14 +126,12 @@
             //all the error messages for the inout fields for if there is a blank value
             if ($id == "")   {$error_message = "<h3 style='color:red'> The id cannot be blank! </h3>";}
             if ($lname == "") {$error_message = "<h3 style='color:red'> The last name cannot be blank! </h3>";}
-            if ($fname == "") {$error_message = "<h3 style='color:red'> The firrst name cannot be blank! </h3>";}
+            if ($fname == "") {$error_message = "<h3 style='color:red'> The first name cannot be blank! </h3>";}
             if ($add == "") {$error_message = "<h3 style='color:red'> The address cannot be blank! </h3>";}
             if ($email == "") {$error_message = "<h3 style='color:red'> The email cannot be blank! </h3>";}
             if ($dele == "") {$error_message = "<h3 style='color:red'> The delete cannot be blank! </h3>";}
 
-            //header
-            echo "<h1> Add A Row to Customer </h1>";
-            
+            echo "<h1> Add A Row to Customers Table </h1>";
             //form for the input fields to add the new data to the table
             echo "<form action = '' method = 'POST'>";
             echo "<br> Enter the Customer Id <input type = 'number' name = 'id' min='0'>";
@@ -117,7 +146,7 @@
             echo "<br>";
             echo "<br> Enter either y for yes or n for no <input type = 'text' name = 'dele' max='1'>";
             echo "<br>";
-            echo "<br><br><input type = 'submit' value = 'Submit Me!' style='background-color: red; color: white'>";
+            echo "<br><br><input type = 'submit' value = 'Add to table!' style='background-color: red; color: white'>";
             echo "</form>";
 
             //inserting the new data into the table and a error message if there was a problem with the insert
@@ -128,11 +157,12 @@
                 if($r) {echo "Values successfully inserted!";}
                 else {echo "Unable to insert into the table!";}
             }
-            else { 
-                //echoing out the error message if something is blank
+            //echoing out the error message if something is blank
+            else {
                 echo "$error_message";  
             }
-
+            
+            //footer
             include "file_author.php";
         ?>
 </main>
