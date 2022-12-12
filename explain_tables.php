@@ -57,7 +57,6 @@
             echo "<h3> Choose a table to view its explanation </h3>";
             echo "<form action = '' method = 'POST'>";
             echo "<input type = 'radio' name = 'sort' value = 'customers'> Customers Table";
-            echo "<br><input type = 'radio' name = 'sort' value = 'orders'> Orders Table";
             echo "<br><input type = 'radio' name = 'sort' value = 'products'> Products Table";
             echo "<br><input type = 'radio' name = 'sort' value = 'suppliers'> Suppliers Table";
             echo "<br><input type = 'radio' name = 'sort' value = 'users'> Users Table";
@@ -77,19 +76,6 @@
                     if($r ){
                         while ($row= mysqli_fetch_array($r, MYSQLI_NUM)){
                             echo "<tr><td>". $row[0] . "</td><td>". $row[1]. "</td><td>". $row[2]. "</td><td>". $row[3]. "</td></tr>";
-                        }
-                    }
-                    echo "</table>";
-                }
-                if ($_POST['sort']=='orders'){
-                    echo "<hr>";
-                    echo "<h1 class='redcolor'> ORDERS </h1>";
-                    echo "<table border = 1 class = 'tableoutline'><tr> <th class='tableheader'> Column Name </th> <th class='tableheader'> Column Type </th> <th class='tableheader'> Null/Not Null</th> <th class='tableheader'> Primary Key </th>";
-                    $q = "EXPLAIN t5_orders";
-                    $r = mysqli_query ($dbc,$q);
-                    if($r ){
-                        while ($row= mysqli_fetch_array($r, MYSQLI_NUM)){
-                            echo "<tr><td>". $row[0] . "</td><td>". $row[1]. "</td><td>". $row[2]."</td><td>". $row[3]. "</td></tr>";
                         }
                     }
                     echo "</table>";
