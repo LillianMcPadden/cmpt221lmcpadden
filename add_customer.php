@@ -1,30 +1,4 @@
-<!DOCTYPE html>
-<!--    t5homepage.html   Homepage
-    09/21/2022 t5 Original Program
--->
-    <html lang="en">
 
-    <head>
-        <title>
-            Stellar Sneakers Homepage
-        </title>
-        <meta charset="utf-8">
-        <!-- style for the page -->
-       <style>
-            * {background-color: rgb(255, 255, 255);}
-            h1 { color : black; font-family: Papyrus;font-size: 45px;}
-            h3 { color:rgb(220, 26, 34);font-size: 25px;font-family: Monaco;}
-            header {background-color:rgb(220, 26, 34);}
-            footer {background-color:rgb(245, 255, 245);}
-            th {font-family: Papyrus;}
-        </style>
-            </head>
-    <body>
-    <!-- Logo to for the website-->
-    <header>
-        <center><img src="logo.png"; width = "1100px"; height = 250px></center>
-
-        
     <!DOCTYPE html>
 <!--    t5homepage.html   Add Row to Customer Table
     09/21/2022 t5 Original Program
