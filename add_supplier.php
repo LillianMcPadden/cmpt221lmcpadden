@@ -124,7 +124,7 @@
             echo "<br>";
             echo "<br> Enter the Phone Number <input type = 'text' name = 'supPhone_num'>";
             echo "<br>";
-            echo "<br> Enter either y for yes or n for no <input type = 'text' name = 'deleted' max='1'>";
+            echo "<br> Enter y to be an active supplier or n to be a supplier in the future <input type = 'text' name = 'deleted' max='1'>";
             echo "<br>";
             echo "<br><br><input type = 'submit' value = 'Add to table!' style='background-color: red; color: white'>";
             echo "</form>";
